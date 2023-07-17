@@ -1,21 +1,22 @@
 let slide_data = [
     {
-      'src':'./assets/img/sbrakes/IMAGEN_14.webp',
-      'title':'SBRAKES',
-      'copy':'SBRAKES.'
+      'src':'./assets/img/sbrakes/AUTO&SBRAKES.png',
+      'title':'',
+      'copy':'',
+      'width': '150px'
     },
     {
-      'src':'./assets/img/sbrakes/IMAGEN_10.jpeg', 
+      'src':'./assets/img/sbrakes/IMAGEN_SBRAKES_07.png', 
       'title':'Slide 2',
       'copy':'SBRAKES'
     },
     {
-      'src':'https://images.unsplash.com/photo-1504271863819-d279190bf871?ixlib=rb-0.3.5&s=7a2b986d405a04b3f9be2e56b2be40dc&auto=format&fit=crop&w=334&q=80', 
-      'title':'Slide 3',
+      'src':'./assets/img/sbrakes/PINZA_GIALLA_DISCO_DIGITALE.jpg', 
+      'title':'TEXTO',
       'copy':'SBRAKES'
     },
     {
-      'src':'https://images.unsplash.com/photo-1478728073286-db190d3d8ce6?ixlib=rb-0.3.5&s=87131a6b538ed72b25d9e0fc4bf8df5b&auto=format&fit=crop&w=1050&q=80', 
+      'src':'./assets/img/sbrakes/DISCOS_BREMBO_04.jpeg', 
       'title':'Slide 4',
       'copy':'SBRAKES.'
     },
@@ -43,11 +44,14 @@ let slide_data = [
   
   for (let i = 0; i< slide_data.length; i++){
     let slide = document.createElement('div'),
-        caption = document.createElement('div'),
-        slide_title = document.createElement('div');
+    caption = document.createElement('div'),
+    slide_title = document.createElement('div');        
       
     slide.classList.add('slide');
     slide.setAttribute('style','background:url('+slide_data[i].src+')');
+    //slide.setAttribute('style', 'width: ' + slide_data[i].width);
+    console.log("SET ATTRIBUTE: " + slide.getAttribute('style'));
+
     caption.classList.add('caption');
     slide_title.classList.add('caption-heading');
     slide_title.innerHTML = '<h1>'+slide_data[i].title+'</h1>';
@@ -69,7 +73,7 @@ let slide_data = [
          break;       
     }
     caption.appendChild(slide_title);
-    caption.insertAdjacentHTML('beforeend','<div class="caption-subhead"><span>SBRAKES MÉXICO. </span></div>');
+    caption.insertAdjacentHTML('beforeend','<div class="caption-subhead"><span>  </span></div>');
     slides.push(slide);
     captions.push(caption);
     leftSlider.appendChild(slide);
