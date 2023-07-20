@@ -3,10 +3,9 @@ let slide_data = [
       'src':'./assets/img/sbrakes/AUTO&SBRAKES.png',
       'title':'',
       'copy':'',
-      'width': '150px'
     },
     {
-      'src':'./assets/img/sbrakes/IMAGEN_SBRAKES_07.png', 
+      'src':'./assets/img/sbrakes/IMAGEN_14.webp', 
       'title':'Slide 2',
       'copy':'SBRAKES'
     },
@@ -15,12 +14,11 @@ let slide_data = [
       'title':'TEXTO',
       'copy':'SBRAKES'
     },
-    {
-      'src':'./assets/img/sbrakes/DISCOS_BREMBO_04.jpeg', 
+    /*{
+      'src':'./assets/img/sbrakes/PRODUCTOS_BREMBO.png', 
       'title':'Slide 4',
       'copy':'SBRAKES.'
-    },
-    
+    },*/
   ];
   let slides = [],
     captions = [];
@@ -55,6 +53,7 @@ let slide_data = [
     caption.classList.add('caption');
     slide_title.classList.add('caption-heading');
     slide_title.innerHTML = '<h1>'+slide_data[i].title+'</h1>';
+    //slide_title.innerHTML = '<h1>' + ""
     
     switch(i){
       case 0:
@@ -88,7 +87,7 @@ let slide_data = [
     slides[0].classList.add('previous','change');
     slides[1].classList.remove('next');
     slides[1].classList.add('current');
-    slides[2].classList.add('next');
+    //slides[2].classList.add('next');
     let last = slides.length -1;
     slides[last].classList.remove('previous');
     
