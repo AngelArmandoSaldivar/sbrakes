@@ -1,0 +1,258 @@
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header and Navbar */
+header {
+    background-color: #b11226;
+    color: white;
+    padding: 10px 0;
+}
+
+/* Hero Section */
+#hero {
+    height: 100vh; /* Mantiene la altura original */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+}
+
+/* Estilos para el video de fondo */
+.video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que el video cubra toda el área */
+    z-index: -1; /* Coloca el video detrás del contenido */
+}
+
+#hero h1 {
+    font-size: 3.5rem;
+}
+
+/* Section Styling */
+section {
+    padding: 50px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+#products {
+    padding: 50px 0;
+}
+.product-card img {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #ff4747; /* Rojo para que resalten */
+    border-radius: 50%;
+    padding: 10px;
+}
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: #cc3838; /* Rojo más oscuro al hacer hover */
+}
+
+.modal-content {
+    border-radius: 10px;
+    border: none;
+}
+.modal-header {
+    background-color: #ff4747;
+    color: white;
+}
+.modal-footer {
+    background-color: #f8f9fa;
+}
+/* Diseño de la imagen en el modal */
+#modalImage {
+    border-radius: 8px;
+}
+.modal-body h4 {
+    color: #333;
+}
+.modal-body p {
+    color: #555;
+}
+.carousel-item {
+    padding: 30px 0;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: rgba(0, 0, 0, 0.3); /* Fondo oscuro transparente */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo más oscuro en hover */
+}
+
+/* Footer */
+footer {
+    background-color: #212529; /* Fondo negro */
+}
+footer .logo {
+    height: 50px;
+}
+footer a {
+    color: white;
+    text-decoration: none;
+}
+footer a:hover {
+    color: #dc3545 !important; /* Rojo para enlaces al pasar el mouse */
+}
+footer .text-danger {
+    color: #dc3545 !important; /* Rojo para títulos */
+}
+footer .img-fluid {
+    transition: transform 0.3s ease-in-out;
+}
+footer .img-fluid:hover {
+    transform: scale(1.05); /* Efecto de escala en las imágenes */
+}
+.social-icons i {
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+.social-icons i:hover {
+    color: #ffc107;
+}
+
+#about {
+        background-color: #f9f9f9;
+        padding: 50px 0;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .lead {
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.708);
+    }
+
+    .btn-danger {
+        background-color: #ff4747; /* Rojo para el botón */
+        border-color: #ff4747;
+    }
+
+    .btn-danger:hover {
+        background-color: #cc3838; /* Rojo más oscuro al pasar el ratón */
+        border-color: #cc3838;
+    }
+
+    .row .col-md-6 img {
+        max-width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border: 3px solid #ddd;
+    }
+
+    /* Asegura que el texto se vea bien con márgenes adecuados */
+    .col-md-6 p {
+        font-size: 1.1rem;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .col-md-6 h3 {
+        font-size: 2rem;
+        color: #333;
+        font-weight: bold;
+    }
+
+    .whatsapp-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #25D366; /* Color verde de WhatsApp */
+        color: white;
+        font-size: 18px;
+        padding: 12px 24px;
+        border-radius: 50px;
+        text-decoration: none;
+        width: 250px;
+        text-align: center;
+        transition: background-color 0.3s ease;
+    }
+
+    .whatsapp-btn:hover {
+        background-color: #128C7E; /* Color verde más oscuro para el hover */
+    }
+
+    .whatsapp-btn i {
+        margin-right: 10px;
+        font-size: 24px;
+    }
+
+    .navbar {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .navbar-nav .nav-item .nav-link {
+        color: #333;
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .navbar-nav .nav-item .nav-link:hover {
+        color: #e63946; /* Rojo suave para el hover */
+        transform: scale(1.05); /* Efecto de aumento al hacer hover */
+    }
+
+    /* Sombra en los botones de navegación */
+    .navbar-nav .nav-item .nav-link {
+        padding: 10px 15px;
+        border-radius: 25px;
+        margin: 0 10px;
+    }
+
+    /* Fondo dinámico al hacer scroll */
+    .navbar.scrolled {
+        background-color: #fff; /* Se pone blanco */
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    }
+
+    /* Efecto de transición en el navbar */
+    .navbar-toggler-icon {
+        background-color: #e63946; /* Rojo en el icono del toggle */
+    }
+
+    /* Logo con bordes suaves */
+    .navbar-brand .logo {
+        max-height: 40px;
+        transition: transform 0.3s ease;
+    }
+
+    /* Efecto hover para el logo */
+    .navbar-brand .logo:hover {
+        transform: scale(1.1); /* Efecto de aumento al hacer hover */
+    }

@@ -1,561 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>SBRAKES</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/img/sbrakes/LOGO_2.jpeg" rel="icon">
-  <link href="assets/img/" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S-BRAKES</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Leaflet CSS -->
+    <link href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">    
 </head>
-
-<body>
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top ">
-    <div class="container d-flex align-items-center justify-content-lg-between">
-
-      <h1 class="logo me-auto me-lg-0"><a href="index.html">S-BRAKES</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Inicio</a></li>
-          <li><a class="nav-link scrollto" href="#about">Acerca de</a></li>
-          <li><a class="nav-link scrollto" href="#services">Servicios</a></li>
-          <li><a class="nav-link scrollto " href="#portfolio">Portafolio</a></li>
-          <li><a class="nav-link scrollto" href="#team">Equipo</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contacto</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-      <a href="#about" class="get-started-btn scrollto">Empezar</a>
-
-    </div>
-  </header><!-- End Header -->
-  <section id="testimonials" class="testimonials">
-    <div class="container" data-aos="zoom-in">
-
-      <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-        <div class="swiper-wrapper">
-
-          <div class="swiper-slide">
-            <div class="testimonial-item">
-              <img src="assets/img/sbrakes/SBRAKES_TODO.jpg" class="testimonial-img" alt="">
+<body> 
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <!-- Logo de la refaccionaria -->
+                <img src="./resources/img/logo S-Brakes blanco.png" alt="Logo" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fs-5 fw-semibold" href="#hero">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fs-5 fw-semibold" href="#about">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fs-5 fw-semibold" href="#products">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fs-5 fw-semibold" href="#services">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fs-5 fw-semibold" href="#map-section">Ubicación</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fs-5 fw-semibold" href="#contact">Contacto</a>
+                    </li>
+                </ul>
             </div>
-          </div><!-- End testimonial item -->
-
-          <div class="swiper-slide">
-            <div class="testimonial-item">
-              <img src="assets/img/sbrakes/PUBLICIDAD_05.png" class="testimonial-img" alt="">
-            </div>
-          </div><!-- End testimonial item -->
-
-          <div class="swiper-slide">
-            <div class="testimonial-item">
-              <img src="assets/img/sbrakes/PUBLICIDAD_10.png" class="testimonial-img" alt="">
-            </div>
-          </div><!-- End testimonial item -->
-
-          <div class="swiper-slide">
-            <div class="testimonial-item">
-              <img src="assets/img/sbrakes/CONTACTO_SBRAKES.png" class="testimonial-img" alt="">
-            </div>
-          </div><!-- End testimonial item -->
-
-          <div class="swiper-slide">
-            <div class="testimonial-item">
-              <img src="assets/img/sbrakes/MERCADO_PAGO.jpg" class="testimonial-img" alt="">
-            </div>
-          </div><!-- End testimonial item -->
         </div>
-        <div class="swiper-pagination"></div>
-      </div>
+    </nav>
+    
 
-    </div>
-  </section><!-- End Testimonials Section -->
-  <main id="main">
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
-
-        <div class="row">
-          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-            <img src="assets/img/sbrakes/IMAGEN_15.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
-            <h3>Tu refaccionaria de confianza</h3>
-            <p class="fst-italic">
-              SBRAKES es una empresa comprometida a ofrecerte lo mejor en con sus productos.
-            </p>
-            <ul>
-          </div>
+    <!-- Hero Section -->
+    <section id="hero">
+        <!-- Video de fondo -->
+        <video autoplay loop muted class="video-bg" style="width: 100%;">
+            <source src="./resources/media/video_inicio.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+    
+        <!-- Contenido sobre el video -->
+        <div class="text-center">
+            <h1>S-BRAKES</h1>
+            <p class="lead">Todo lo que necesitas para mantener tu vehículo en perfectas condiciones</p>
+            <a href="#products" class="btn btn-primary btn-lg">Explorar Productos</a>
         </div>
+    </section>
 
-      </div>
-    </section><!-- End About Section -->
-
-    <!-- ======= Clients Section ======= -->
-    <section id="clients" class="clients">
-      <div class="container" data-aos="zoom-in">
-
-        <div class="clients-slider swiper">
-          <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="assets/img/sbrakes/BALATAS_BREMBO_03.jpeg" class="img-fluid"
-                alt="imagen_1"></div>
-            <div class="swiper-slide"><img src="assets/img/sbrakes/BALATAS_BREMBO_04.jpeg" class="img-fluid"
-                alt="imagen_2"></div>
-            <div class="swiper-slide"><img src="assets/img/sbrakes/BALATAS_BREMBO_09.jpg" class="img-fluid"
-                alt="imagen_3"></div>
-            <div class="swiper-slide"><img src="assets/img/sbrakes/BALATAS_BREMBO_12.jpg" class="img-fluid"
-                alt="imagen_4"></div>
-            <div class="swiper-slide"><img src="assets/img/sbrakes/BALATAS_BREMBO_14.jpg" class="img-fluid"
-                alt="imagen_5"></div>
-            <div class="swiper-slide"><img src="assets/img/sbrakes/BALATAS_BREMBO_15.jpg" class="img-fluid"
-                alt="imagen_6"></div>
-            <div class="swiper-slide"><img src="assets/img/sbrakes/BALATAS_BREMBO_22.jpg" class="img-fluid"
-                alt="imagen_7"></div>
-            <div class="swiper-slide"><img src="assets/img/sbrakes/BALATAS_BREMBO_21.jpg" class="img-fluid"
-                alt="imagen_8"></div>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-    </section><!-- End Clients Section -->
-
-    <!-- ======= Features Section ======= -->
-    <section id="features" class="features">
-      <div class="container" data-aos="fade-up">
-
-        <div class="row">
-          <div class="image col-lg-6" style='background-image: url("assets/img/sbrakes/IMAGEN_DISCO_CALIPER.jpg");'
-            data-aos="fade-right"></div>
-          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
-            <div class="icon-box mt-5 mt-lg-0" data-aos="zoom-in" data-aos-delay="150">
-              <i class="bx bx-receipt"></i>
-              <h4>CALIDAD / PRECIO</h4>
-              <p>Ofrecemos productos de la mejor calidad y precio.</p>
-            </div>
-            <div class="icon-box mt-5" data-aos="zoom-in" data-aos-delay="150">
-              <i class="bx bx-cube-alt"></i>
-              <h4>STOCK</h4>
-              <p>Contamos con el stock para nunca negar producto.</p>
-            </div>
-            <div class="icon-box mt-5" data-aos="zoom-in" data-aos-delay="150">
-              <i class="bx bx-images"></i>
-              <h4>ATENCIÓN </h4>
-              <p>Nuestros vendedores cuentan con capacitaciones para brindarte la mejor atención.</p>
-            </div>
-            <div class="icon-box mt-5" data-aos="zoom-in" data-aos-delay="150">
-              <i class="bx bx-shield"></i>
-              <h4>SEGURIDAD </h4>
-              <p>Nuestros productos cuentan con las mejores formulas para brindarte seguridad al manejar.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Features Section -->
-
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Servicios</h2>
-          <p>¿Que ofrecemos?</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bxl-dribbble"></i></div>
-              <h4><a href="">Venta de refacciones</a></h4>
-              <p>Venta de refacciones 100% originales y de calidad.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
-            data-aos-delay="200">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h4><a href="">Servicios mecanicos</a></h4>
-              <p>Servicio a tu auto de cualquier categoria</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in"
-            data-aos-delay="300">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4><a href="">Venta a mostrador</a></h4>
-              <p>Contamos con venta a mostrador, atendiendote en tiempo record.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-world"></i></div>
-              <h4><a href="">Venta en línea</a></h4>
-              <p>Se està trabajando en un sitio web para la venta en línea, esperalo muy pronto!</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-slideshow"></i></div>
-              <h4><a href="">Atención al cliente</a></h4>
-              <p>Cualquier duda podremos responder sin ningun costo. </p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-arch"></i></div>
-              <h4><a href="">Venta de amortiguadores</a></h4>
-              <p>Venta de amortiguadores de la mejor marca.</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Services Section -->
-
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Catálogo</h2>
-          <p>Catálogo de articulos</p>
-        </div>
-
-        <div class="row" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">Todo</li>
-              <li data-filter=".filter-app">Balatas</li>
-              <li data-filter=".filter-card">Discos</li>
-              <li data-filter=".filter-web">Caliper</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/sbrakes/BALATAS BREMBO_13.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Brembo</h4>
-                <p>"Código de balata"</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/sbrakes/BALATAS_BREMBO_03.jpeg" data-gallery="portfolioGallery"
-                    class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+    <section id="about" class="text-center py-5 bg-light">
+        <div class="container">
+            <br/><br/>
+            <h2 class="section-title mb-5">¿Quiénes somos?</h2>
+            
+            <div class="row align-items-center">
+                <!-- Imagen representativa de la empresa con bordes y sombra -->
+                <div class="col-md-6 mb-4">
+                    <img src="./resources/img/auto_1.jpg" alt="Equipo de trabajo" class="img-fluid rounded shadow-lg border border-1 border-dark" style="width: 60%;">
                 </div>
-              </div>
-            </div>
-          </div>
+                
+                <!-- Descripción sobre la empresa -->
+                <div class="col-md-6 mb-4" style="text-align: justify;">
+                    <h3 class="mb-4">Expertos en Refacciones Automotrices</h3>
+                    <p class="lead mb-4">En nuestra refaccionaria, nos dedicamos a ofrecer los mejores productos para el mantenimiento y reparación de vehículos. Con más de 10 años de experiencia en el sector, nos enorgullece brindar soluciones de alta calidad para tus necesidades automotrices. Trabajamos con las marcas más reconocidas y contamos con un equipo especializado dispuesto a asesorarte en todo momento.</p>
+                    
+                    <p class="mb-4">Además, ofrecemos servicios mecánicos completos para garantizar el óptimo funcionamiento de tu vehículo. ¡Te esperamos!</p>
+                    
+                    <!-- Botón para agendar cita -->                    
+                    <a href="https://wa.me/5522805577?text=Hola,%20me%20gustaría%20agendar%20una%20cita." 
+                    target="_blank" 
+                    class="whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i> Agendar Cita
+                    </a>
 
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/sbrakes/BALATAS_BREMBO_27.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Brembo</h4>
-                <p>"Código de balata"</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/sbrakes/IMAGEN_CALIPER_ROJO_AMARILLO.jpg" data-gallery="portfolioGallery"
-                    class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
-              </div>
             </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/sbrakes/DISCOS_BREMBO_04.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Brembo</h4>
-                <p>"Código de balata"</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/sbrakes/DISCOS_BREMBO_01.jpeg" data-gallery="portfolioGallery"
-                    class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/sbrakes/IMAGEN_CALIPER_ROJO_AMARILLO.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Brembo</h4>
-                <p>"Código de balata"</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/sbrakes/BALATAS_BREMBO_16.jpg" data-gallery="portfolioGallery"
-                    class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/sbrakes/BALATAS_BREMBO_22.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Brembo</h4>
-                <p>"Código de balata"</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/sbrakes/BALATAS_BREMBO_09.jpg" data-gallery="portfolioGallery"
-                    class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/sbrakes/IMAGEN_DISCO_CALIPER.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Brembo</h4>
-                <p>"Código de balata"</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/sbrakes/DIBUJO BALATA.jpg" data-gallery="portfolioGallery"
-                    class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/sbrakes/DISCO_BREMBO_10.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Brembo</h4>
-                <p>"Código de balata"</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/sbrakes/DISCO_CALIPER_AMARILLO.jpg" data-gallery="portfolioGallery"
-                    class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/sbrakes/IMAGEN_CALIPER_GRIS_NEGRO.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Brembo</h4>
-                <p>"Código de balata"</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/sbrakes/DISCO_CALIPER_ROJO.jpg" data-gallery="portfolioGallery"
-                    class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
         </div>
+    </section>
 
-      </div>
-    </section><!-- End Portfolio Section -->
-
-    <!-- ======= Counts Section ======= -->
-    <section id="counts" class="counts">
-
-      </div>
-    </section><!-- End Counts Section -->
-
-    <!-- ======= Team Section ======= -->
-    <section id="team" class="team">
-    </section><!-- End Team Section -->
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Contacto</h2>
-          <p>Contáctenos</p>
-        </div>
-
-        <div>
-          <iframe style="border:0; width: 100%; height: 270px;"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.255991184142!2d-99.1484261245183!3d19.401342341677953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff1d88b067bb%3A0xb2c700d8ec4e741f!2sCaleta%2038%2C%20Narvarte%20Poniente%2C%20Benito%20Ju%C3%A1rez%2C%2003023%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses!2smx!4v1692082254426!5m2!1ses!2smx"
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-
-        <div class="row mt-5">
-
-          <div class="col-lg-4">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Ubicación:</h4>
-                <p>SEVILLA 312
-                  COL. PORTALES NORTE
-                  ALCALDIA BENITO JUAREZ
-                  CDMX</p>
-              </div>
-
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>sbrakes@gmail.com</p>
-              </div>
-
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Telefono(s):</h4>
-                <p>(55) 22805577</p>
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="col-lg-8 mt-5 mt-lg-0">
-
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" required>
+    <!-- Products Section -->
+    <section id="products">
+        <div class="container">
+            <br/><br/>
+            <h2 class="section-title">Nuestros Productos</h2>
+    
+            <!-- Carousel de Bootstrap -->
+            <div id="productSlider" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Primer Item del Carousel -->
+                    <div class="carousel-item active">
+                        <div class="row g-4">
+                            <div class="col-lg-4">
+                                <div class="card product-card">
+                                    <img src="./resources/img/balatas_brembo.webp" class="card-img-top" alt="Balatas">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Balatas</h5>
+                                        <p class="card-text">Calidad premium para frenos óptimos.</p>
+                                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal" data-bs-title="Balatas" data-bs-description="Las balatas de calidad premium están diseñadas para ofrecer una potencia de frenado óptima y durabilidad superior." data-bs-image="https://via.placeholder.com/600x400">Ver más</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="card product-card">
+                                    <img src="./resources/img/discos_brembo.jpg" class="card-img-top" alt="Discos">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Discos</h5>
+                                        <p class="card-text">Durabilidad y precisión garantizadas.</p>
+                                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal" data-bs-title="Discos" data-bs-description="Nuestros discos de freno aseguran un rendimiento eficiente, ofreciendo una gran precisión y durabilidad." data-bs-image="https://via.placeholder.com/600x400">Ver más</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="card product-card">
+                                    <img src="./resources/img/amortiguadores_blinstein.jpg" class="card-img-top" alt="Suspensión">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Suspensión</h5>
+                                        <p class="card-text">Estabilidad y confort para tu vehículo.</p>
+                                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal" data-bs-title="Suspensión" data-bs-description="La suspensión de alta calidad mejora el control del vehículo y garantiza una conducción cómoda y segura." data-bs-image="https://via.placeholder.com/600x400">Ver más</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Correo Electronico"
-                    required>
-                </div>
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Sujeto" required>
-              </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Mensaje" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Enviar Mensaje</button></div>
-            </form>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Contact Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="footer-info">
-              <h3>SBRAKES</h3>
-              <p>
-                SEVILLA 312
-                COL. PORTALES NORTE
-                ALCALDIA BENITO JUAREZ
-                CDMX<br>
-                <strong>Phone:</strong> (55) 22805577<br>
-                <strong>Email:</strong> sbrakes@gmail.com<br>
-              </p>
-              <div class="social-links mt-3">
-                <a href="" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="https://www.facebook.com/profile.php?id=100083046144937" class="facebook"><i
-                    class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-              </div>
             </div>
-          </div>
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Accesos directos</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Inicio</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Acerca de</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Servicios</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Portafolio</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Politicas de privacidad</a></li>
-            </ul>
-          </div>
+    
+            <!-- Modal con imagen y descripción -->
+            <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel">Título del Producto</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img id="modalImage" src="https://via.placeholder.com/600x400" class="img-fluid" alt="Imagen del producto">
+                                </div>
+                                <div class="col-md-6">
+                                    <h4 id="modalTitle">Título del Producto</h4>
+                                    <p id="modalDescription">Descripción del Producto</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
         </div>
-      </div>
-    </div>
+    </section>
+    <br/><br/>
+    <!-- Brands Section -->
+    <section id="brands" class="text-center bg-light">
+        <div class="container">
+            <h2 class="section-title">Marcas que manejamos</h2>
+    
+            <!-- Carousel de Marcas -->
+            <div id="brandsSlider" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Primer Item del Carousel -->
+                    <div class="carousel-item active">
+                        <div class="d-flex justify-content-around">
+                            <img src="./resources/img/logo_brembo.png" alt="Marca 1" class="img-fluid m-3" style="width: 27%; height: 80px;">
+                            <img src="./resources/img/logo_stop_tech.jpg" alt="Marca 2" class="img-fluid m-3" style="width: 27%; height: 80px;">
+                            <img src="./resources/img/logo_blinstein.png" alt="Marca 3" class="img-fluid m-3" style="width: 25%; height: 80px;">
+                        </div>
+                    </div>
+                    <!-- Segundo Item del Carousel -->
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-around">
+                            <img src="./resources/img/logo_fremax.png" alt="Marca 4" class="img-fluid m-3" class="img-fluid m-3" style="width: 27%; height: 80px;">
+                            <img src="./resources/img/logo_hawk.jpg" alt="Marca 5" class="img-fluid m-3" class="img-fluid m-3" style="width: 27%; height: 80px;">
+                            <img src="./resources/img/logo_akebono.png" alt="Marca 6" class="img-fluid m-3" class="img-fluid m-3" style="width: 24%; height: 80px;"> 
+                        </div>
+                    </div>
+                    <!-- Tercer Item del Carousel -->
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-around">
+                            <img src="./resources/img/logo_ate.jpg" alt="Marca 7" class="img-fluid m-3" class="img-fluid m-3" style="width: 12%; height: 80px;">                           
+                        </div>
+                    </div>
+                </div>
+                <!-- Controles de la Carousel -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#brandsSlider" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#brandsSlider" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </div>
+    </section>
 
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>SBRAKES</span></strong>. Todos los derechos reservados
-      </div>
-      <div class="credits">
-      </div>
-    </div>
-  </footer><!-- End Footer -->
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container"> <br /><br />
+            <h2 class="section-title">Servicios Mecánicos</h2>
+            <p class="text-center">Ofrecemos servicios de mantenimiento y reparación a todo tipo de vehículos.</p>
+        </div>
+    </section>
 
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+    <!-- Map Section -->
+    <section id="map-section">
+        <div class="container">
+            <br /><br />
+            <h2 class="section-title">Encuéntranos</h2>
+            <div id="map" style="height: 400px;"></div>
+        </div>
+    </section>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <!-- Logo a la izquierda -->
+                <div class="col-md-3 mb-3">
+                    <a href="#" class="navbar-brand text-white">
+                        <img src="./resources/img/logo-sbrakes.png" alt="Logo" class="img-fluid" style="width: 200px;">
+                    </a>
+                </div>
+    
+                <!-- Sección de navegación con botones -->
+                <div class="col-md-6 mb-3">
+                    <h5 class="fw-semibold text-danger">Enlaces</h5> <!-- Rojo para el título -->
+                    <ul class="list-unstyled">
+                        <li><a href="#about" class="text-white text-decoration-none">Nosotros</a></li>
+                        <li><a href="#products" class="text-white text-decoration-none">Productos</a></li>
+                        <li><a href="#services" class="text-white text-decoration-none">Servicios</a></li>
+                        <li><a href="#contact" class="text-white text-decoration-none">Contacto</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Sección de marcas -->
+                <div class="col-md-3 mb-3">
+                    <h5 class="fw-semibold text-danger">Marcas que manejamos</h5> <!-- Rojo para el título -->
+                    <div class="d-flex justify-content-start">
+                        <img src="./resources/img/logo_brembo.png" alt="Marca 1" class="img-fluid me-3" width="100px" height="70px">
+                        <img src="./resources/img/logo_blinstein.png" alt="Marca 2" class="img-fluid me-3" width="100px" height="70px">
+                        <img src="./resources/img/logo_hawk.jpg" alt="Marca 3" class="img-fluid me-3" width="100px" height="70px">
+                    </div>
+                </div>
+            </div>
+    
+            <hr class="border-white">
+    
+            <!-- Sección de redes sociales -->
+            <div class="d-flex justify-content-center">
+                <a href="#" class="text-white fs-4 mx-3">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#" class="text-white fs-4 mx-3">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="text-white fs-4 mx-3">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="text-white fs-4 mx-3">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+    
+            <hr class="border-white mt-3">
+            <!-- Copyright -->
+            <div class="text-center mt-3">
+                <p>&copy; 2024 S-BRAKES. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Font Awesome para íconos de redes sociales -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-  <link rel="stylesheet" href="./assets/css/style_slider.css">
-  <script src="./assets/js/slider_sbrakes.js"></script>
-
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="./scripts.js"></script>   
 </body>
-
 </html>
