@@ -1,304 +1,973 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>S-BRAKES</title>
+    <title>S-Brakes | Refacciones Automotrices Premium</title>
+    
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome for icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <!-- Leaflet CSS -->
-    <link href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body> 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-lg fixed-top">
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <!-- Logo de la refaccionaria -->
-                <img src="./resources/img/logo S-Brakes blanco.png" alt="Logo" class="logo">
+            <a class="navbar-brand" href="#inicio">
+                <div class="brand-container">
+                    <div class="brand-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="brand-text">
+                        <span class="brand-name">S-BRAKES</span>
+                        <span class="brand-tagline">Premium Parts</span>
+                    </div>
+                </div>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link text-dark fs-5 fw-semibold" href="#hero">Inicio</a>
+                        <a class="nav-link active" href="#inicio">
+                            <i class="fas fa-home"></i>
+                            <span>Inicio</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-cogs"></i>
+                            <span>Productos</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#productos"><i class="fas fa-brake-disc me-2"></i>Frenos</a></li>
+                            <li><a class="dropdown-item" href="#productos"><i class="fas fa-engine me-2"></i>Motor</a></li>
+                            <li><a class="dropdown-item" href="#productos"><i class="fas fa-car-side me-2"></i>Suspensión</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#productos"><i class="fas fa-list me-2"></i>Ver Todo</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark fs-5 fw-semibold" href="#about">Nosotros</a>
+                        <a class="nav-link" href="#servicios">
+                            <i class="fas fa-wrench"></i>
+                            <span>Servicios</span>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark fs-5 fw-semibold" href="#products">Productos</a>
+                        <a class="nav-link" href="#nosotros">
+                            <i class="fas fa-users"></i>
+                            <span>Nosotros</span>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark fs-5 fw-semibold" href="#services">Servicios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark fs-5 fw-semibold" href="#map-section">Ubicación</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark fs-5 fw-semibold" href="#contact">Contacto</a>
+                        <a class="nav-link" href="#contacto">
+                            <i class="fas fa-envelope"></i>
+                            <span>Contacto</span>
+                        </a>
                     </li>
                 </ul>
+                
+                <div class="navbar-actions ms-3">
+                    <a href="tel:+5215647437541" class="btn btn-outline-light btn-sm me-2">
+                        <i class="fas fa-phone me-1"></i>Llamar
+                    </a>
+                    <a href="#contacto" class="btn btn-danger btn-sm">
+                        <i class="fas fa-quote-left me-1"></i>Cotizar
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
-    
 
     <!-- Hero Section -->
-    <section id="hero">
-        <!-- Video de fondo -->
-        <video autoplay loop muted class="video-bg" style="width: 100%;">
-            <source src="./resources/media/video_inicio.mp4" type="video/mp4">
-            Tu navegador no soporta el elemento de video.
-        </video>
-    
-        <!-- Contenido sobre el video -->
-        <div class="text-center">
-            <h1>S-BRAKES</h1>
-            <p class="lead">Todo lo que necesitas para mantener tu vehículo en perfectas condiciones</p>
-            <a href="#products" class="btn btn-primary btn-lg">Explorar Productos</a>
+    <section id="inicio" class="hero-section">
+        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            
+            <div class="carousel-inner">
+                <!-- Slide 1 - Premium Parts -->
+                <div class="carousel-item active">
+                    <div class="hero-slide" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%), url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+                        <div class="container">
+                            <div class="row align-items-center min-vh-100">
+                                <div class="col-lg-8">
+                                    <div class="hero-badge mb-3" data-aos="fade-up" data-aos-delay="100">
+                                        <i class="fas fa-award me-2"></i>CALIDAD PREMIUM
+                                    </div>
+                                    <h1 class="display-3 fw-bold text-white mb-4" data-aos="fade-up" data-aos-delay="200">
+                                        Refacciones <span class="text-danger">Premium</span><br>
+                                        <span class="hero-subtitle">Para Tu Vehículo</span>
+                                    </h1>
+                                    <p class="lead text-white mb-4 hero-description" data-aos="fade-up" data-aos-delay="300">
+                                        <i class="fas fa-check-circle text-danger me-2"></i>Más de 20 años de experiencia<br>
+                                        <i class="fas fa-check-circle text-danger me-2"></i>Garantía en todas nuestras refacciones<br>
+                                        <i class="fas fa-check-circle text-danger me-2"></i>Precios competitivos del mercado
+                                    </p>
+                                    <div class="hero-stats mb-4" data-aos="fade-up" data-aos-delay="400">
+                                        <div class="stat-item">
+                                            <span class="stat-number">20+</span>
+                                            <span class="stat-label">Años</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <span class="stat-number">5000+</span>
+                                            <span class="stat-label">Clientes</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <span class="stat-number">100%</span>
+                                            <span class="stat-label">Garantía</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-wrap gap-3" data-aos="fade-up" data-aos-delay="500">
+                                        <a href="#productos" class="btn btn-danger btn-lg px-4 hero-btn">
+                                            <i class="fas fa-shopping-cart me-2"></i>Ver Productos
+                                            <span class="btn-shine"></span>
+                                        </a>
+                                        <a href="#contacto" class="btn btn-outline-light btn-lg px-4 hero-btn">
+                                            <i class="fas fa-phone me-2"></i>Contactar Ahora
+                                            <span class="btn-shine"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 d-none d-lg-block">
+                                    <div class="hero-feature-box" data-aos="fade-left" data-aos-delay="600">
+                                        <div class="feature-icon">
+                                            <i class="fas fa-shipping-fast"></i>
+                                        </div>
+                                        <h4>Envío Gratis</h4>
+                                        <p>En compras mayores a $1,500</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 2 - Expert Service -->
+                <div class="carousel-item">
+                    <div class="hero-slide" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 100%), url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+                        <div class="container">
+                            <div class="row align-items-center min-vh-100">
+                                <div class="col-lg-8">
+                                    <div class="hero-badge mb-3" data-aos="fade-up" data-aos-delay="100">
+                                        <i class="fas fa-tools me-2"></i>SERVICIO EXPERTO
+                                    </div>
+                                    <h1 class="display-3 fw-bold text-white mb-4" data-aos="fade-up" data-aos-delay="200">
+                                        <span class="text-danger">Especialistas</span><br>
+                                        <span class="hero-subtitle">en Todas las Marcas</span>
+                                    </h1>
+                                    <p class="lead text-white mb-4 hero-description" data-aos="fade-up" data-aos-delay="300">
+                                        <i class="fas fa-wrench text-danger me-2"></i>Instalación profesional incluida<br>
+                                        <i class="fas fa-certificate text-danger me-2"></i>Técnicos certificados<br>
+                                        <i class="fas fa-clock text-danger me-2"></i>Servicio rápido y confiable
+                                    </p>
+                                    <div class="hero-brands mb-4" data-aos="fade-up" data-aos-delay="400">
+                                        <span class="brand-item">BMW</span>
+                                        <span class="brand-item">AUDI</span>
+                                        <span class="brand-item">MERCEDES</span>
+                                        <span class="brand-item">VOLKSWAGEN</span>
+                                        <span class="brand-item">+50 MARCAS</span>
+                                    </div>
+                                    <div class="d-flex flex-wrap gap-3" data-aos="fade-up" data-aos-delay="500">
+                                        <a href="#servicios" class="btn btn-danger btn-lg px-4 hero-btn">
+                                            <i class="fas fa-cogs me-2"></i>Ver Servicios
+                                            <span class="btn-shine"></span>
+                                        </a>
+                                        <a href="#nosotros" class="btn btn-outline-light btn-lg px-4 hero-btn">
+                                            <i class="fas fa-info-circle me-2"></i>Conocer Más
+                                            <span class="btn-shine"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 d-none d-lg-block">
+                                    <div class="hero-feature-box" data-aos="fade-left" data-aos-delay="600">
+                                        <div class="feature-icon">
+                                            <i class="fas fa-shield-alt"></i>
+                                        </div>
+                                        <h4>Garantía Total</h4>
+                                        <p>12 meses en todas las piezas</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 3 - Professional Installation -->
+                <div class="carousel-item">
+                    <div class="hero-slide" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.8) 100%), url('https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+                        <div class="container">
+                            <div class="row align-items-center min-vh-100">
+                                <div class="col-lg-8">
+                                    <div class="hero-badge mb-3" data-aos="fade-up" data-aos-delay="100">
+                                        <i class="fas fa-user-tie me-2"></i>INSTALACIÓN PROFESIONAL
+                                    </div>
+                                    <h1 class="display-3 fw-bold text-white mb-4" data-aos="fade-up" data-aos-delay="200">
+                                        <span class="text-danger">Servicio</span><br>
+                                        <span class="hero-subtitle">Técnico Profesional</span>
+                                    </h1>
+                                    <p class="lead text-white mb-4 hero-description" data-aos="fade-up" data-aos-delay="300">
+                                        <i class="fas fa-user-cog text-danger me-2"></i>Técnicos certificados y especializados<br>
+                                        <i class="fas fa-calendar-check text-danger me-2"></i>Citas programadas y servicio express<br>
+                                        <i class="fas fa-thumbs-up text-danger me-2"></i>Más de 50,000 clientes satisfechos
+                                    </p>
+                                    <div class="hero-services mb-4" data-aos="fade-up" data-aos-delay="400">
+                                        <div class="service-item">
+                                            <i class="fas fa-wrench"></i>
+                                            <span>Instalación</span>
+                                        </div>
+                                        <div class="service-item">
+                                            <i class="fas fa-search"></i>
+                                            <span>Diagnóstico</span>
+                                        </div>
+                                        <div class="service-item">
+                                            <i class="fas fa-tools"></i>
+                                            <span>Mantenimiento</span>
+                                        </div>
+                                        <div class="service-item">
+                                            <i class="fas fa-headset"></i>
+                                            <span>Soporte 24/7</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-wrap gap-3" data-aos="fade-up" data-aos-delay="500">
+                                        <a href="#servicios" class="btn btn-danger btn-lg px-4 hero-btn">
+                                            <i class="fas fa-wrench me-2"></i>Nuestros Servicios
+                                            <span class="btn-shine"></span>
+                                        </a>
+                                        <a href="#contacto" class="btn btn-outline-light btn-lg px-4 hero-btn">
+                                            <i class="fas fa-calendar me-2"></i>Agendar Cita
+                                            <span class="btn-shine"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 d-none d-lg-block">
+                                    <div class="hero-feature-box" data-aos="fade-left" data-aos-delay="600">
+                                        <div class="feature-icon">
+                                            <i class="fas fa-clock"></i>
+                                        </div>
+                                        <h4>Servicio Express</h4>
+                                        <p>Instalación en menos de 2 horas</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
         </div>
     </section>
 
-    <section id="about" class="text-center py-5 bg-light">
+    <!-- Features Section -->
+    <section class="features-section py-5">
         <div class="container">
-            <br/><br/>
-            <h2 class="section-title mb-5">¿Quiénes somos?</h2>
-            
-            <div class="row align-items-center">
-                <!-- Imagen representativa de la empresa con bordes y sombra -->
-                <div class="col-md-6 mb-4">
-                    <img src="./resources/img/auto_1.jpg" alt="Equipo de trabajo" class="img-fluid rounded shadow-lg border border-1 border-dark" style="width: 60%;">
+            <div class="row mb-4">
+                <div class="col-12 text-center" data-aos="fade-up">
+                    <h2 class="section-title">Por Qué Elegirnos</h2>
+                    <p class="section-subtitle">Beneficios que nos hacen únicos en el mercado</p>
                 </div>
-                
-                <!-- Descripción sobre la empresa -->
-                <div class="col-md-6 mb-4" style="text-align: justify;">
-                    <h3 class="mb-4">Expertos en Refacciones Automotrices</h3>
-                    <p class="lead mb-4">En nuestra refaccionaria, nos dedicamos a ofrecer los mejores productos para el mantenimiento y reparación de vehículos. Con más de 10 años de experiencia en el sector, nos enorgullece brindar soluciones de alta calidad para tus necesidades automotrices. Trabajamos con las marcas más reconocidas y contamos con un equipo especializado dispuesto a asesorarte en todo momento.</p>
-                    
-                    <p class="mb-4">Además, ofrecemos servicios mecánicos completos para garantizar el óptimo funcionamiento de tu vehículo. ¡Te esperamos!</p>
-                    
-                    <!-- Botón para agendar cita -->                    
-                    <a href="https://wa.me/5522805577?text=Hola,%20me%20gustaría%20agendar%20una%20cita." 
-                    target="_blank" 
-                    class="whatsapp-btn">
-                        <i class="fab fa-whatsapp"></i> Agendar Cita
-                    </a>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon-wrapper">
+                            <div class="feature-icon">
+                                <i class="fas fa-shipping-fast"></i>
+                            </div>
+                            <div class="feature-badge">GRATIS</div>
+                        </div>
+                        <h5>Envío Rápido</h5>
+                        <p class="feature-description">Entrega <strong>gratuita</strong> en 24-48 horas en toda la ciudad metropolitana</p>
+                        <div class="feature-highlight">
+                            <i class="fas fa-clock me-2"></i>24-48 hrs
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon-wrapper">
+                            <div class="feature-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="feature-badge">12 MESES</div>
+                        </div>
+                        <h5>Garantía Total</h5>
+                        <p class="feature-description"><strong>12 meses</strong> de garantía completa en todas nuestras refacciones originales</p>
+                        <div class="feature-highlight">
+                            <i class="fas fa-certificate me-2"></i>Certificada
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon-wrapper">
+                            <div class="feature-icon">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <div class="feature-badge">EXPERTOS</div>
+                        </div>
+                        <h5>Instalación</h5>
+                        <p class="feature-description">Servicio de instalación <strong>profesional</strong> con técnicos certificados</p>
+                        <div class="feature-highlight">
+                            <i class="fas fa-user-tie me-2"></i>Profesional
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon-wrapper">
+                            <div class="feature-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div class="feature-badge">24/7</div>
+                        </div>
+                        <h5>Soporte Total</h5>
+                        <p class="feature-description">Atención al cliente <strong>24/7</strong> por teléfono, chat y WhatsApp</p>
+                        <div class="feature-highlight">
+                            <i class="fas fa-phone me-2"></i>Siempre disponible
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Brands Carousel Section -->
+    <section class="brands-section py-5 bg-white">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center" data-aos="fade-up">
+                    <h2 class="section-title">Marcas de Confianza</h2>
+                    <p class="section-subtitle">Trabajamos con las mejores marcas del mercado automotriz</p>
+                </div>
+            </div>
+            <div id="brandsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row text-center align-items-center">
+                            <div class="col-lg-2 col-md-4 col-6 mb-3">
+                                <div class="brand-logo">
+                                    <div class="brand-text">BOSCH</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6 mb-3">
+                                <div class="brand-logo">
+                                    <div class="brand-text">BREMBO</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6 mb-3">
+                                <div class="brand-logo">
+                                    <div class="brand-text">MONROE</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6 mb-3">
+                                <div class="brand-logo">
+                                    <div class="brand-text">MOBIL 1</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6 mb-3">
+                                <div class="brand-logo">
+                                    <div class="brand-text">CASTROL</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6 mb-3">
+                                <div class="brand-logo">
+                                    <div class="brand-text">DENSO</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row text-center align-items-center">
+                            <div class="col-lg-2 col-md-4 col-6 mb-3">
+                                <div class="brand-logo">
+                                    <div class="brand-text">NGK</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6 mb-3">
+                                <div class="brand-logo">
+                                    <div class="brand-text">MANN</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6 mb-3">
+                                <div class="brand-logo">
+                                    <div class="brand-text">SACHS</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6 mb-3">
+                                <div class="brand-logo">
+                                    <div class="brand-text">BILSTEIN</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6 mb-3">
+                                <div class="brand-logo">
+                                    <div class="brand-text">MAHLE</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6 mb-3">
+                                <div class="brand-logo">
+                                    <div class="brand-text">GATES</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Mission Vision Section -->
+    <section class="mission-vision-section py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center" data-aos="fade-up">
+                    <h2 class="section-title text-white">Nuestra Filosofía</h2>
+                    <p class="section-subtitle">Los pilares que definen nuestra empresa</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4" data-aos="fade-right">
+                    <div class="mission-card">
+                        <div class="mission-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>Nuestra Misión</h3>
+                        <p>Ser el proveedor líder de refacciones automotrices de alta calidad, brindando soluciones confiables y servicio excepcional que garantice la seguridad y satisfacción de nuestros clientes, contribuyendo al mantenimiento óptimo de sus vehículos con tecnología de vanguardia.</p>
+                        <div class="mission-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Calidad garantizada</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Servicio excepcional</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Seguridad total</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4" data-aos="fade-left">
+                    <div class="vision-card">
+                        <div class="vision-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>Nuestra Visión</h3>
+                        <p>Consolidarnos como la empresa de refacciones automotrices más confiable y reconocida a nivel nacional, expandiendo nuestra presencia y siendo referente en innovación, calidad y excelencia en el servicio al cliente, liderando la transformación digital del sector.</p>
+                        <div class="vision-goals">
+                            <div class="goal-item">
+                                <i class="fas fa-trophy"></i>
+                                <span>Liderazgo nacional</span>
+                            </div>
+                            <div class="goal-item">
+                                <i class="fas fa-rocket"></i>
+                                <span>Innovación constante</span>
+                            </div>
+                            <div class="goal-item">
+                                <i class="fas fa-globe"></i>
+                                <span>Expansión estratégica</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Values Section -->
+    <section class="values-section py-5 bg-light">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center" data-aos="fade-up">
+                    <h2 class="section-title">Nuestros Valores</h2>
+                    <p class="section-subtitle">Los principios fundamentales que definen nuestra cultura empresarial</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h4>Compromiso</h4>
+                        <p>Dedicación total con la calidad y satisfacción de nuestros clientes, garantizando productos y servicios de primera clase.</p>
+                        <div class="value-highlight">
+                            <i class="fas fa-handshake"></i>
+                            <span>Compromiso total</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Confianza</h4>
+                        <p>Relaciones duraderas basadas en transparencia, honestidad y credibilidad en cada interacción con nuestros clientes.</p>
+                        <div class="value-highlight">
+                            <i class="fas fa-certificate"></i>
+                            <span>Confianza garantizada</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>Excelencia</h4>
+                        <p>Búsqueda constante de la perfección en productos, servicios y procesos, superando siempre las expectativas del cliente.</p>
+                        <div class="value-highlight">
+                            <i class="fas fa-award"></i>
+                            <span>Calidad superior</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h4>Innovación</h4>
+                        <p>Adopción de nuevas tecnologías y métodos para ofrecer soluciones avanzadas y mantenernos a la vanguardia del sector.</p>
+                        <div class="value-highlight">
+                            <i class="fas fa-rocket"></i>
+                            <span>Tecnología avanzada</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Products Section -->
-    <section id="products">
+    <section id="productos" class="products-section py-5 bg-white">
         <div class="container">
-            <br/><br/>
-            <h2 class="section-title">Nuestros Productos</h2>
-    
-            <!-- Carousel de Bootstrap -->
-            <div id="productSlider" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <!-- Primer Item del Carousel -->
-                    <div class="carousel-item active">
-                        <div class="row g-4">
-                            <div class="col-lg-4">
-                                <div class="card product-card">
-                                    <img src="./resources/img/balatas_brembo.webp" class="card-img-top" alt="Balatas">
-                                    <div class="card-body text-center">
-                                        <h5 class="card-title">Balatas</h5>
-                                        <p class="card-text">Calidad premium para frenos óptimos.</p>
-                                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal" data-bs-title="Balatas" data-bs-description="Las balatas de calidad premium están diseñadas para ofrecer una potencia de frenado óptima y durabilidad superior." data-bs-image="https://via.placeholder.com/600x400">Ver más</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="card product-card">
-                                    <img src="./resources/img/discos_brembo.jpg" class="card-img-top" alt="Discos">
-                                    <div class="card-body text-center">
-                                        <h5 class="card-title">Discos</h5>
-                                        <p class="card-text">Durabilidad y precisión garantizadas.</p>
-                                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal" data-bs-title="Discos" data-bs-description="Nuestros discos de freno aseguran un rendimiento eficiente, ofreciendo una gran precisión y durabilidad." data-bs-image="https://via.placeholder.com/600x400">Ver más</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="card product-card">
-                                    <img src="./resources/img/amortiguadores_blinstein.jpg" class="card-img-top" alt="Suspensión">
-                                    <div class="card-body text-center">
-                                        <h5 class="card-title">Suspensión</h5>
-                                        <p class="card-text">Estabilidad y confort para tu vehículo.</p>
-                                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal" data-bs-title="Suspensión" data-bs-description="La suspensión de alta calidad mejora el control del vehículo y garantiza una conducción cómoda y segura." data-bs-image="https://via.placeholder.com/600x400">Ver más</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="row mb-5">
+                <div class="col-12 text-center" data-aos="fade-up">
+                    <h2 class="section-title">Catálogo de Productos</h2>
+                    <p class="section-subtitle">Refacciones premium para todas las marcas y modelos de vehículos</p>
                 </div>
             </div>
-    
-            <!-- Modal con imagen y descripción -->
-            <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="productModalLabel">Título del Producto</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <img id="modalImage" src="https://via.placeholder.com/600x400" class="img-fluid" alt="Imagen del producto">
-                                </div>
-                                <div class="col-md-6">
-                                    <h4 id="modalTitle">Título del Producto</h4>
-                                    <p id="modalDescription">Descripción del Producto</p>
-                                </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="product-card">
+                        <div class="product-badge">PREMIUM</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                 alt="Frenos" class="img-fluid">
+                            <div class="product-overlay">
+                                <a href="#" class="btn btn-danger">Ver Catálogo</a>
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <div class="product-info">
+                            <div class="product-icon">
+                                <i class="fas fa-brake-disc"></i>
+                            </div>
+                            <h5>Sistema de Frenos</h5>
+                            <p>Pastillas, discos, tambores y componentes completos de freno para máxima seguridad</p>
+                            <div class="product-features">
+                                <span class="feature-tag">Brembo</span>
+                                <span class="feature-tag">Bosch</span>
+                                <span class="feature-tag">ATE</span>
+                            </div>
+                            <div class="product-price">Desde $299</div>
                         </div>
                     </div>
                 </div>
-            </div>
-    
-        </div>
-    </section>
-    <br/><br/>
-    <!-- Brands Section -->
-    <section id="brands" class="text-center bg-light">
-        <div class="container">
-            <h2 class="section-title">Marcas que manejamos</h2>
-    
-            <!-- Carousel de Marcas -->
-            <div id="brandsSlider" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <!-- Primer Item del Carousel -->
-                    <div class="carousel-item active">
-                        <div class="d-flex justify-content-around">
-                            <img src="./resources/img/logo_brembo.png" alt="Marca 1" class="img-fluid m-3" style="width: 27%; height: 80px;">
-                            <img src="./resources/img/logo_stop_tech.jpg" alt="Marca 2" class="img-fluid m-3" style="width: 27%; height: 80px;">
-                            <img src="./resources/img/logo_blinstein.png" alt="Marca 3" class="img-fluid m-3" style="width: 25%; height: 80px;">
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="product-card">
+                        <div class="product-badge">BESTSELLER</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                 alt="Motor" class="img-fluid">
+                            <div class="product-overlay">
+                                <a href="#" class="btn btn-danger">Ver Catálogo</a>
+                            </div>
                         </div>
-                    </div>
-                    <!-- Segundo Item del Carousel -->
-                    <div class="carousel-item">
-                        <div class="d-flex justify-content-around">
-                            <img src="./resources/img/logo_fremax.png" alt="Marca 4" class="img-fluid m-3" class="img-fluid m-3" style="width: 27%; height: 80px;">
-                            <img src="./resources/img/logo_hawk.jpg" alt="Marca 5" class="img-fluid m-3" class="img-fluid m-3" style="width: 27%; height: 80px;">
-                            <img src="./resources/img/logo_akebono.png" alt="Marca 6" class="img-fluid m-3" class="img-fluid m-3" style="width: 24%; height: 80px;"> 
-                        </div>
-                    </div>
-                    <!-- Tercer Item del Carousel -->
-                    <div class="carousel-item">
-                        <div class="d-flex justify-content-around">
-                            <img src="./resources/img/logo_ate.jpg" alt="Marca 7" class="img-fluid m-3" class="img-fluid m-3" style="width: 12%; height: 80px;">                           
+                        <div class="product-info">
+                            <div class="product-icon">
+                                <i class="fas fa-engine"></i>
+                            </div>
+                            <h5>Componentes de Motor</h5>
+                            <p>Filtros, bujías, correas y todas las piezas esenciales para el motor de tu vehículo</p>
+                            <div class="product-features">
+                                <span class="feature-tag">Mann</span>
+                                <span class="feature-tag">NGK</span>
+                                <span class="feature-tag">Gates</span>
+                            </div>
+                            <div class="product-price">Desde $150</div>
                         </div>
                     </div>
                 </div>
-                <!-- Controles de la Carousel -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#brandsSlider" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Anterior</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#brandsSlider" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Siguiente</span>
-                </button>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="product-card">
+                        <div class="product-badge">NUEVO</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                 alt="Suspensión" class="img-fluid">
+                            <div class="product-overlay">
+                                <a href="#" class="btn btn-danger">Ver Catálogo</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-icon">
+                                <i class="fas fa-car-side"></i>
+                            </div>
+                            <h5>Sistema de Suspensión</h5>
+                            <p>Amortiguadores, resortes y componentes de suspensión para máximo confort y control</p>
+                            <div class="product-features">
+                                <span class="feature-tag">Monroe</span>
+                                <span class="feature-tag">Bilstein</span>
+                                <span class="feature-tag">Sachs</span>
+                            </div>
+                            <div class="product-price">Desde $450</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="product-card">
+                        <div class="product-badge">OFERTA</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                 alt="Transmisión" class="img-fluid">
+                            <div class="product-overlay">
+                                <a href="#" class="btn btn-danger">Ver Catálogo</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <h5>Sistema de Transmisión</h5>
+                            <p>Embragues, cajas de cambio y componentes de transmisión para rendimiento óptimo</p>
+                            <div class="product-features">
+                                <span class="feature-tag">Sachs</span>
+                                <span class="feature-tag">LuK</span>
+                                <span class="feature-tag">Valeo</span>
+                            </div>
+                            <div class="product-price">Desde $650</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="product-card">
+                        <div class="product-badge">POPULAR</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                 alt="Eléctrico" class="img-fluid">
+                            <div class="product-overlay">
+                                <a href="#" class="btn btn-danger">Ver Catálogo</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <h5>Sistema Eléctrico</h5>
+                            <p>Baterías, alternadores, motores de arranque y componentes eléctricos especializados</p>
+                            <div class="product-features">
+                                <span class="feature-tag">Bosch</span>
+                                <span class="feature-tag">Denso</span>
+                                <span class="feature-tag">Valeo</span>
+                            </div>
+                            <div class="product-price">Desde $200</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="product-card">
+                        <div class="product-badge">COMPLETO</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                 alt="Lubricantes" class="img-fluid">
+                            <div class="product-overlay">
+                                <a href="#" class="btn btn-danger">Ver Catálogo</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-icon">
+                                <i class="fas fa-oil-can"></i>
+                            </div>
+                            <h5>Lubricantes y Fluidos</h5>
+                            <p>Aceites, refrigerantes, líquidos de freno y todos los fluidos esenciales del vehículo</p>
+                            <div class="product-features">
+                                <span class="feature-tag">Mobil 1</span>
+                                <span class="feature-tag">Castrol</span>
+                                <span class="feature-tag">Shell</span>
+                            </div>
+                            <div class="product-price">Desde $80</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services">
-        <div class="container"> <br /><br />
-            <h2 class="section-title">Servicios Mecánicos</h2>
-            <p class="text-center">Ofrecemos servicios de mantenimiento y reparación a todo tipo de vehículos.</p>
+    <!-- About Section -->
+    <section id="nosotros" class="about-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="section-title">Sobre S-Brakes</h2>
+                    <p class="mb-4">
+                        Con más de dos décadas en el mercado automotriz, S-Brakes se ha consolidado como líder 
+                        en la distribución de refacciones de alta calidad. Nuestra misión es brindar a nuestros 
+                        clientes productos confiables que garanticen la seguridad y el rendimiento óptimo de sus vehículos.
+                    </p>
+                    <div class="stats-row">
+                        <div class="stat-item">
+                            <h3 class="stat-number">20+</h3>
+                            <p>Años de Experiencia</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="stat-number">50K+</h3>
+                            <p>Clientes Satisfechos</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="stat-number">1000+</h3>
+                            <p>Productos Disponibles</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Taller" class="img-fluid rounded-3">
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Map Section -->
-    <section id="map-section">
+    <!-- WhatsApp Quote Section -->
+    <section class="whatsapp-section py-5 bg-danger text-white">
         <div class="container">
-            <br /><br />
-            <h2 class="section-title">Encuéntranos</h2>
-            <div id="map" style="height: 400px;"></div>
+            <div class="row align-items-center">
+                <div class="col-lg-8" data-aos="fade-right">
+                    <div class="whatsapp-content">
+                        <div class="whatsapp-icon mb-3">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h2 class="mb-3">¿Necesitas una Cotización Rápida?</h2>
+                        <p class="lead mb-4">
+                            Obtén precios al instante para cualquier refacción o servicio. Nuestro equipo de expertos 
+                            te responderá inmediatamente con la mejor cotización del mercado.
+                        </p>
+                        <div class="whatsapp-features">
+                            <div class="feature-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Respuesta inmediata</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-calculator"></i>
+                                <span>Cotización gratuita</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-user-tie"></i>
+                                <span>Asesoría personalizada</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center" data-aos="fade-left">
+                    <div class="whatsapp-cta">
+                        <h3 class="mb-4">¡Cotiza Ahora!</h3>
+                        <a href="https://wa.me/5215647437541?text=Hola%20S-Brakes,%20me%20interesa%20cotizar%20refacciones%20para%20mi%20vehículo.%20¿Podrían%20ayudarme?" 
+                           target="_blank" class="btn btn-light btn-lg whatsapp-btn">
+                            <i class="fab fa-whatsapp me-2"></i>
+                            Enviar Mensaje
+                        </a>
+                        <p class="mt-3 mb-0">
+                            <small>+52 1 56 4743 7541</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location-section py-5 bg-light">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center" data-aos="fade-up">
+                    <h2 class="section-title">Nuestra Ubicación</h2>
+                    <p class="section-subtitle">Visítanos en nuestra refaccionaria para atención personalizada</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mb-4" data-aos="fade-right">
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.2!2d-99.1190979!4d19.4178255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff823d55ca67%3A0xedcc72e0616d96b5!2sS-BRAKES%20M%C3%89XICO!5e0!3m2!1ses!2smx!4v1234567890123!5m2!1ses!2smx" 
+                            width="100%" 
+                            height="400" 
+                            style="border:0;border-radius:15px;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-left">
+                    <div class="location-info">
+                        <h3 class="mb-4">Información de Contacto</h3>
+                        <div class="location-item">
+                            <div class="location-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="location-details">
+                                <h5>Dirección</h5>
+                                <p>Calle Zoquipa 242<br>Aeronáutica Militar<br>Venustiano Carranza, 15970<br>Ciudad de México, CDMX</p>
+                            </div>
+                        </div>
+                        <div class="location-item">
+                            <div class="location-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="location-details">
+                                <h5>Horarios de Atención</h5>
+                                <p>Lunes a Viernes: 8:00 AM - 7:00 PM<br>
+                                   Sábados: 8:00 AM - 5:00 PM<br>
+                                   Domingos: 9:00 AM - 2:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="location-item">
+                            <div class="location-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="location-details">
+                                <h5>Teléfono</h5>
+                                <p>+52 1 56 4743 7541</p>
+                            </div>
+                        </div>
+                        <div class="location-item">
+                            <div class="location-icon">
+                                <i class="fas fa-car"></i>
+                            </div>
+                            <div class="location-details">
+                                <h5>Estacionamiento</h5>
+                                <p>Amplio estacionamiento gratuito disponible</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact-section py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center" data-aos="fade-up">
+                    <h2 class="section-title text-white">Contáctanos</h2>
+                    <p class="section-subtitle">Estamos aquí para ayudarte</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h5>Dirección</h5>
+                                <p>Calle Zoquipa 242, Aeronáutica Militar, Venustiano Carranza, 15970 Ciudad de México, CDMX</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h5>Teléfono</h5>
+                                <p>+52 1 56 4743 7541</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h5>Email</h5>
+                                <p>info@s-brakes.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+                    <form class="contact-form">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <input type="text" class="form-control" placeholder="Nombre completo" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input type="email" class="form-control" placeholder="Email" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Asunto" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Mensaje" required></textarea>
+                        </div>
+                        <div class="d-flex gap-3">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="fas fa-paper-plane me-2"></i>Enviar Mensaje
+                            </button>
+                            <a href="https://wa.me/5215647437541?text=Hola%20S-Brakes,%20me%20gustaría%20obtener%20más%20información%20sobre%20sus%20servicios." 
+                               target="_blank" class="btn btn-success btn-lg">
+                                <i class="fab fa-whatsapp me-2"></i>WhatsApp
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
+    <footer class="footer py-4 bg-black text-white">
         <div class="container">
-            <div class="row">
-                <!-- Logo a la izquierda -->
-                <div class="col-md-3 mb-3">
-                    <a href="#" class="navbar-brand text-white">
-                        <img src="./resources/img/logo-sbrakes.png" alt="Logo" class="img-fluid" style="width: 200px;">
-                    </a>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 S-Brakes. Todos los derechos reservados.</p>
                 </div>
-    
-                <!-- Sección de navegación con botones -->
-                <div class="col-md-6 mb-3">
-                    <h5 class="fw-semibold text-danger">Enlaces</h5> <!-- Rojo para el título -->
-                    <ul class="list-unstyled">
-                        <li><a href="#about" class="text-white text-decoration-none">Nosotros</a></li>
-                        <li><a href="#products" class="text-white text-decoration-none">Productos</a></li>
-                        <li><a href="#services" class="text-white text-decoration-none">Servicios</a></li>
-                        <li><a href="#contact" class="text-white text-decoration-none">Contacto</a></li>
-                    </ul>
-                </div>
-    
-                <!-- Sección de marcas -->
-                <div class="col-md-3 mb-3">
-                    <h5 class="fw-semibold text-danger">Marcas que manejamos</h5> <!-- Rojo para el título -->
-                    <div class="d-flex justify-content-start">
-                        <img src="./resources/img/logo_brembo.png" alt="Marca 1" class="img-fluid me-3" width="100px" height="70px">
-                        <img src="./resources/img/logo_blinstein.png" alt="Marca 2" class="img-fluid me-3" width="100px" height="70px">
-                        <img src="./resources/img/logo_hawk.jpg" alt="Marca 3" class="img-fluid me-3" width="100px" height="70px">
+                <div class="col-md-6 text-md-end">
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
             </div>
-    
-            <hr class="border-white">
-    
-            <!-- Sección de redes sociales -->
-            <div class="d-flex justify-content-center">
-                <a href="#" class="text-white fs-4 mx-3">
-                    <i class="fab fa-facebook"></i>
-                </a>
-                <a href="#" class="text-white fs-4 mx-3">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#" class="text-white fs-4 mx-3">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="#" class="text-white fs-4 mx-3">
-                    <i class="fab fa-youtube"></i>
-                </a>
-            </div>
-    
-            <hr class="border-white mt-3">
-            <!-- Copyright -->
-            <div class="text-center mt-3">
-                <p>&copy; 2024 S-BRAKES. Todos los derechos reservados.</p>
-            </div>
         </div>
     </footer>
-    
-    <!-- Font Awesome para íconos de redes sociales -->
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    
 
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="./scripts.js"></script>   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
 </body>
 </html>
