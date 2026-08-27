@@ -1,51 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>S-Brakes | Refacciones Automotrices Premium</title>
-    
-    <!-- Bootstrap CSS -->
+    <link rel="icon" type="image/jpeg" href="images/logo-2.jpeg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#inicio">
-                <div class="brand-container">
-                    <div class="brand-icon">
-                        <i class="fas fa-car"></i>
-                    </div>
-                    <div class="brand-text">
-                        <span class="brand-name">S-BRAKES</span>
-                        <span class="brand-tagline">Premium Parts</span>
-                    </div>
-                </div>
+                <img src="images/logo-2.jpeg" alt="S-Brakes Logo" style="height:75px; margin: -12px 0;">
             </a>
-            
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link active" href="#inicio">
-                            <i class="fas fa-home"></i>
-                            <span>Inicio</span>
+                            <i class="fas fa-home"></i><span>Inicio</span>
                         </a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fas fa-cogs"></i>
-                            <span>Productos</span>
+                            <i class="fas fa-cogs"></i><span>Productos</span>
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#productos"><i class="fas fa-brake-disc me-2"></i>Frenos</a></li>
@@ -56,27 +42,17 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#servicios">
-                            <i class="fas fa-wrench"></i>
-                            <span>Servicios</span>
-                        </a>
+                        <a class="nav-link" href="#servicios"><i class="fas fa-wrench"></i><span>Servicios</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#nosotros">
-                            <i class="fas fa-users"></i>
-                            <span>Nosotros</span>
-                        </a>
+                        <a class="nav-link" href="#nosotros"><i class="fas fa-users"></i><span>Nosotros</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contacto">
-                            <i class="fas fa-envelope"></i>
-                            <span>Contacto</span>
-                        </a>
+                        <a class="nav-link" href="#contacto"><i class="fas fa-envelope"></i><span>Contacto</span></a>
                     </li>
                 </ul>
-                
                 <div class="navbar-actions ms-3">
-                    <a href="tel:+5215647437541" class="btn btn-outline-light btn-sm me-2">
+                    <a href="tel:+5584453639" class="btn btn-outline-light btn-sm me-2">
                         <i class="fas fa-phone me-1"></i>Llamar
                     </a>
                     <a href="#contacto" class="btn btn-danger btn-sm">
@@ -95,169 +71,80 @@
                 <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
-            
             <div class="carousel-inner">
-                <!-- Slide 1 - Premium Parts -->
                 <div class="carousel-item active">
-                    <div class="hero-slide" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%), url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+                    <div class="hero-slide" style="background-color:#1a1a1a;">
                         <div class="container">
                             <div class="row align-items-center min-vh-100">
-                                <div class="col-lg-8">
-                                    <div class="hero-badge mb-3" data-aos="fade-up" data-aos-delay="100">
-                                        <i class="fas fa-award me-2"></i>CALIDAD PREMIUM
-                                    </div>
-                                    <h1 class="display-3 fw-bold text-white mb-4" data-aos="fade-up" data-aos-delay="200">
-                                        Refacciones <span class="text-danger">Premium</span><br>
-                                        <span class="hero-subtitle">Para Tu Vehículo</span>
+                                <div class="col-12 col-lg-7 hero-content">
+                                    <div class="hero-badge mb-3"><i class="fas fa-award me-2"></i>CALIDAD PREMIUM</div>
+                                    <h1 class="hero-title fw-bold text-white mb-3">
+                                        Frenos <span class="text-danger">Performance</span><br> para tu Vehículo
                                     </h1>
-                                    <p class="lead text-white mb-4 hero-description" data-aos="fade-up" data-aos-delay="300">
-                                        <i class="fas fa-check-circle text-danger me-2"></i>Más de 20 años de experiencia<br>
-                                        <i class="fas fa-check-circle text-danger me-2"></i>Garantía en todas nuestras refacciones<br>
-                                        <i class="fas fa-check-circle text-danger me-2"></i>Precios competitivos del mercado
+                                    <p class="hero-description text-white mb-4">
+                                        <i class="fas fa-check-circle text-danger me-2"></i>Garantía en todas nuestras refacciones
                                     </p>
-                                    <div class="hero-stats mb-4" data-aos="fade-up" data-aos-delay="400">
-                                        <div class="stat-item">
-                                            <span class="stat-number">20+</span>
-                                            <span class="stat-label">Años</span>
-                                        </div>
-                                        <div class="stat-item">
-                                            <span class="stat-number">5000+</span>
-                                            <span class="stat-label">Clientes</span>
-                                        </div>
-                                        <div class="stat-item">
-                                            <span class="stat-number">100%</span>
-                                            <span class="stat-label">Garantía</span>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex flex-wrap gap-3" data-aos="fade-up" data-aos-delay="500">
+                                    <div class="d-flex flex-wrap gap-3">
                                         <a href="#productos" class="btn btn-danger btn-lg px-4 hero-btn">
                                             <i class="fas fa-shopping-cart me-2"></i>Ver Productos
-                                            <span class="btn-shine"></span>
                                         </a>
                                         <a href="#contacto" class="btn btn-outline-light btn-lg px-4 hero-btn">
-                                            <i class="fas fa-phone me-2"></i>Contactar Ahora
-                                            <span class="btn-shine"></span>
+                                            <i class="fas fa-phone me-2"></i>Contáctanos
                                         </a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 d-none d-lg-block">
-                                    <div class="hero-feature-box" data-aos="fade-left" data-aos-delay="600">
-                                        <div class="feature-icon">
-                                            <i class="fas fa-shipping-fast"></i>
-                                        </div>
-                                        <h4>Envío Gratis</h4>
-                                        <p>En compras mayores a $1,500</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Slide 2 - Expert Service -->
                 <div class="carousel-item">
-                    <div class="hero-slide" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 100%), url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+                    <div class="hero-slide" style="background-color:#1a1a1a;">
                         <div class="container">
                             <div class="row align-items-center min-vh-100">
-                                <div class="col-lg-8">
-                                    <div class="hero-badge mb-3" data-aos="fade-up" data-aos-delay="100">
-                                        <i class="fas fa-tools me-2"></i>SERVICIO EXPERTO
-                                    </div>
-                                    <h1 class="display-3 fw-bold text-white mb-4" data-aos="fade-up" data-aos-delay="200">
-                                        <span class="text-danger">Especialistas</span><br>
-                                        <span class="hero-subtitle">en Todas las Marcas</span>
+                                <div class="col-12 col-lg-7 hero-content">
+                                    <div class="hero-badge mb-3"><i class="fas fa-tools me-2"></i>SERVICIO EXPERTO</div>
+                                    <h1 class="hero-title fw-bold text-white mb-3">
+                                        <span class="text-danger">Especialistas</span><br>en Todas las Marcas
                                     </h1>
-                                    <p class="lead text-white mb-4 hero-description" data-aos="fade-up" data-aos-delay="300">
+                                    <p class="hero-description text-white mb-4">
                                         <i class="fas fa-wrench text-danger me-2"></i>Instalación profesional incluida<br>
                                         <i class="fas fa-certificate text-danger me-2"></i>Técnicos certificados<br>
                                         <i class="fas fa-clock text-danger me-2"></i>Servicio rápido y confiable
                                     </p>
-                                    <div class="hero-brands mb-4" data-aos="fade-up" data-aos-delay="400">
-                                        <span class="brand-item">BMW</span>
-                                        <span class="brand-item">AUDI</span>
-                                        <span class="brand-item">MERCEDES</span>
-                                        <span class="brand-item">VOLKSWAGEN</span>
-                                        <span class="brand-item">+50 MARCAS</span>
-                                    </div>
-                                    <div class="d-flex flex-wrap gap-3" data-aos="fade-up" data-aos-delay="500">
+                                    <div class="d-flex flex-wrap gap-3">
                                         <a href="#servicios" class="btn btn-danger btn-lg px-4 hero-btn">
                                             <i class="fas fa-cogs me-2"></i>Ver Servicios
-                                            <span class="btn-shine"></span>
                                         </a>
                                         <a href="#nosotros" class="btn btn-outline-light btn-lg px-4 hero-btn">
                                             <i class="fas fa-info-circle me-2"></i>Conocer Más
-                                            <span class="btn-shine"></span>
                                         </a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 d-none d-lg-block">
-                                    <div class="hero-feature-box" data-aos="fade-left" data-aos-delay="600">
-                                        <div class="feature-icon">
-                                            <i class="fas fa-shield-alt"></i>
-                                        </div>
-                                        <h4>Garantía Total</h4>
-                                        <p>12 meses en todas las piezas</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Slide 3 - Professional Installation -->
                 <div class="carousel-item">
-                    <div class="hero-slide" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.8) 100%), url('https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+                    <div class="hero-slide" style="background-color:#1a1a1a;">
                         <div class="container">
                             <div class="row align-items-center min-vh-100">
-                                <div class="col-lg-8">
-                                    <div class="hero-badge mb-3" data-aos="fade-up" data-aos-delay="100">
-                                        <i class="fas fa-user-tie me-2"></i>INSTALACIÓN PROFESIONAL
-                                    </div>
-                                    <h1 class="display-3 fw-bold text-white mb-4" data-aos="fade-up" data-aos-delay="200">
-                                        <span class="text-danger">Servicio</span><br>
-                                        <span class="hero-subtitle">Técnico Profesional</span>
+                                <div class="col-12 col-lg-7 hero-content">
+                                    <div class="hero-badge mb-3"><i class="fas fa-user-tie me-2"></i>INSTALACIÓN PROFESIONAL</div>
+                                    <h1 class="hero-title fw-bold text-white mb-3">
+                                        Servicio <span class="text-danger">Técnico</span>
                                     </h1>
-                                    <p class="lead text-white mb-4 hero-description" data-aos="fade-up" data-aos-delay="300">
+                                    <p class="hero-description text-white mb-4">
                                         <i class="fas fa-user-cog text-danger me-2"></i>Técnicos certificados y especializados<br>
-                                        <i class="fas fa-calendar-check text-danger me-2"></i>Citas programadas y servicio express<br>
+                                        <i class="fas fa-calendar-check text-danger me-2"></i>Citas programadas<br>
                                         <i class="fas fa-thumbs-up text-danger me-2"></i>Más de 50,000 clientes satisfechos
                                     </p>
-                                    <div class="hero-services mb-4" data-aos="fade-up" data-aos-delay="400">
-                                        <div class="service-item">
-                                            <i class="fas fa-wrench"></i>
-                                            <span>Instalación</span>
-                                        </div>
-                                        <div class="service-item">
-                                            <i class="fas fa-search"></i>
-                                            <span>Diagnóstico</span>
-                                        </div>
-                                        <div class="service-item">
-                                            <i class="fas fa-tools"></i>
-                                            <span>Mantenimiento</span>
-                                        </div>
-                                        <div class="service-item">
-                                            <i class="fas fa-headset"></i>
-                                            <span>Soporte 24/7</span>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex flex-wrap gap-3" data-aos="fade-up" data-aos-delay="500">
+                                    <div class="d-flex flex-wrap gap-3">
                                         <a href="#servicios" class="btn btn-danger btn-lg px-4 hero-btn">
                                             <i class="fas fa-wrench me-2"></i>Nuestros Servicios
-                                            <span class="btn-shine"></span>
                                         </a>
                                         <a href="#contacto" class="btn btn-outline-light btn-lg px-4 hero-btn">
                                             <i class="fas fa-calendar me-2"></i>Agendar Cita
-                                            <span class="btn-shine"></span>
                                         </a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 d-none d-lg-block">
-                                    <div class="hero-feature-box" data-aos="fade-left" data-aos-delay="600">
-                                        <div class="feature-icon">
-                                            <i class="fas fa-clock"></i>
-                                        </div>
-                                        <h4>Servicio Express</h4>
-                                        <p>Instalación en menos de 2 horas</p>
                                     </div>
                                 </div>
                             </div>
@@ -265,7 +152,6 @@
                     </div>
                 </div>
             </div>
-            
             <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon"></span>
             </button>
@@ -288,120 +174,50 @@
                 <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="feature-card text-center">
                         <div class="feature-icon-wrapper">
-                            <div class="feature-icon">
-                                <i class="fas fa-shipping-fast"></i>
-                            </div>
+                            <div class="feature-icon"><i class="fas fa-shipping-fast"></i></div>
                             <div class="feature-badge">GRATIS</div>
                         </div>
                         <h5>Envío Rápido</h5>
-                        <p class="feature-description">Entrega <strong>gratuita</strong> en 24-48 horas en toda la ciudad metropolitana</p>
-                        <div class="feature-highlight">
-                            <i class="fas fa-clock me-2"></i>24-48 hrs
-                        </div>
+                        <p class="feature-description">Entrega <strong>gratuita</strong> en menos de 1 hr</p>
+                        <div class="feature-highlight"><i class="fas fa-clock me-2"></i>Área metropolitana</div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="feature-card text-center">
                         <div class="feature-icon-wrapper">
-                            <div class="feature-icon">
-                                <i class="fas fa-shield-alt"></i>
-                            </div>
-                            <div class="feature-badge">12 MESES</div>
+                            <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                            <div class="feature-badge">30 DIAS</div>
                         </div>
                         <h5>Garantía Total</h5>
-                        <p class="feature-description"><strong>12 meses</strong> de garantía completa en todas nuestras refacciones originales</p>
-                        <div class="feature-highlight">
-                            <i class="fas fa-certificate me-2"></i>Certificada
-                        </div>
+                        <p class="feature-description"><strong>30 días</strong> o <strong>1000 km</strong> de garantía completa en nuestros sistemas de frenos</p>
+                        <div class="feature-highlight"><i class="fas fa-certificate me-2"></i>Certificada</div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="feature-card text-center">
                         <div class="feature-icon-wrapper">
-                            <div class="feature-icon">
-                                <i class="fas fa-tools"></i>
-                            </div>
+                            <div class="feature-icon"><i class="fas fa-tools"></i></div>
                             <div class="feature-badge">EXPERTOS</div>
                         </div>
                         <h5>Instalación</h5>
                         <p class="feature-description">Servicio de instalación <strong>profesional</strong> con técnicos certificados</p>
-                        <div class="feature-highlight">
-                            <i class="fas fa-user-tie me-2"></i>Profesional
-                        </div>
+                        <div class="feature-highlight"><i class="fas fa-user-tie me-2"></i>Profesional</div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
                     <div class="feature-card text-center">
                         <div class="feature-icon-wrapper">
-                            <div class="feature-icon">
-                                <i class="fas fa-headset"></i>
-                            </div>
+                            <div class="feature-icon"><i class="fas fa-headset"></i></div>
                             <div class="feature-badge">24/7</div>
                         </div>
                         <h5>Soporte Total</h5>
-                        <p class="feature-description">Atención al cliente <strong>24/7</strong> por teléfono, chat y WhatsApp</p>
-                        <div class="feature-highlight">
-                            <i class="fas fa-phone me-2"></i>Siempre disponible
-                        </div>
+                        <p class="feature-description">Atención al cliente <strong>24/7</strong> por WhatsApp</p>
+                        <div class="feature-highlight"><i class="fas fa-phone me-2"></i>Siempre disponible</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Brands Section -->
-    <section class="brands-section py-4 bg-white">
-        <div class="container">
-            <div class="row mb-4">
-                <div class="col-12 text-center" data-aos="fade-up">
-                    <h2 class="section-title">Marcas de Confianza</h2>
-                    <p class="section-subtitle">Trabajamos con las mejores marcas del mercado automotriz</p>
-                </div>
-            </div>
-            
-            <!-- Brands Carousel -->
-            <div id="brandsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-aos="fade-up" data-aos-delay="200">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row justify-content-center align-items-center">
-                            <div class="col-2">
-                                <div class="brand-logo-small">
-                                    <img src="images/logo-brembo.png" alt="Brembo" class="brand-img-small">
-                                </div>
-                            </div>
-                            <div class="col-2">
-                                <div class="brand-logo-small">
-                                    <img src="images/akebono-logo.png" alt="Akebono" class="brand-img-small">
-                                </div>
-                            </div>
-                            <div class="col-2">
-                                <div class="brand-logo-small">
-                                    <img src="images/ate-logo.png" alt="ATE" class="brand-img-small">
-                                </div>
-                            </div>
-                            <div class="col-2">
-                                <div class="brand-logo-small">
-                                    <img src="images/fremax-logo.png" alt="Fremax" class="brand-img-small">
-                                </div>
-                            </div>
-                            <div class="col-2">
-                                <div class="brand-logo-small">
-                                    <img src="images/gates-vector-logo.png" alt="Gates" class="brand-img-small">
-                                </div>
-                            </div>
-                            <div class="col-2">
-                                <div class="brand-logo-small">
-                                    <img src="images/ngk-logo.webp" alt="NGK" class="brand-img-small">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
 
     <!-- Mission Vision Section -->
     <section class="mission-vision-section py-5 bg-dark text-white">
@@ -415,47 +231,25 @@
             <div class="row">
                 <div class="col-lg-6 mb-4" data-aos="fade-right">
                     <div class="mission-card">
-                        <div class="mission-icon">
-                            <i class="fas fa-bullseye"></i>
-                        </div>
+                        <div class="mission-icon"><i class="fas fa-bullseye"></i></div>
                         <h3>Nuestra Misión</h3>
-                        <p>Ser el proveedor líder de refacciones automotrices de alta calidad, brindando soluciones confiables y servicio excepcional que garantice la seguridad y satisfacción de nuestros clientes, contribuyendo al mantenimiento óptimo de sus vehículos con tecnología de vanguardia.</p>
+                        <p>Brindar soluciones especializadas en sistemas de frenado que superen las exigencias de nuestros clientes y vehículos, ofreciendo componentes y marcas de alto desempeño que prioricen la seguridad, confiabilidad y precisión. Nos enfocamos en vehículos asiáticos, europeos, de gama alta y blindados, donde la calidad del frenado es una necesidad, no una opción.</p>
                         <div class="mission-features">
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Calidad garantizada</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Servicio excepcional</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Seguridad total</span>
-                            </div>
+                            <div class="feature-item"><i class="fas fa-check-circle"></i><span>Calidad garantizada</span></div>
+                            <div class="feature-item"><i class="fas fa-check-circle"></i><span>Servicio excepcional</span></div>
+                            <div class="feature-item"><i class="fas fa-check-circle"></i><span>Seguridad total</span></div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 mb-4" data-aos="fade-left">
                     <div class="vision-card">
-                        <div class="vision-icon">
-                            <i class="fas fa-eye"></i>
-                        </div>
+                        <div class="vision-icon"><i class="fas fa-eye"></i></div>
                         <h3>Nuestra Visión</h3>
-                        <p>Consolidarnos como la empresa de refacciones automotrices más confiable y reconocida a nivel nacional, expandiendo nuestra presencia y siendo referente en innovación, calidad y excelencia en el servicio al cliente, liderando la transformación digital del sector.</p>
+                        <p>Ser la empresa referente en México en soluciones de frenado de alto desempeño, reconocida por elevar los estándares de seguridad, calidad y confiabilidad en vehículos asiáticos, europeos, de gama alta y blindados, consolidándonos como el aliado especializado para quienes exigen el máximo de su sistema de frenado.</p>
                         <div class="vision-goals">
-                            <div class="goal-item">
-                                <i class="fas fa-trophy"></i>
-                                <span>Liderazgo nacional</span>
-                            </div>
-                            <div class="goal-item">
-                                <i class="fas fa-rocket"></i>
-                                <span>Innovación constante</span>
-                            </div>
-                            <div class="goal-item">
-                                <i class="fas fa-globe"></i>
-                                <span>Expansión estratégica</span>
-                            </div>
+                            <div class="goal-item"><i class="fas fa-trophy"></i><span>Liderazgo nacional</span></div>
+                            <div class="goal-item"><i class="fas fa-rocket"></i><span>Innovación constante</span></div>
+                            <div class="goal-item"><i class="fas fa-globe"></i><span>Expansión estratégica</span></div>
                         </div>
                     </div>
                 </div>
@@ -475,54 +269,34 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="value-card">
-                        <div class="value-icon">
-                            <i class="fas fa-heart"></i>
-                        </div>
+                        <div class="value-icon"><i class="fas fa-heart"></i></div>
                         <h4>Compromiso</h4>
                         <p>Dedicación total con la calidad y satisfacción de nuestros clientes, garantizando productos y servicios de primera clase.</p>
-                        <div class="value-highlight">
-                            <i class="fas fa-handshake"></i>
-                            <span>Compromiso total</span>
-                        </div>
+                        <div class="value-highlight"><i class="fas fa-handshake"></i><span>Compromiso total</span></div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="value-card">
-                        <div class="value-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
+                        <div class="value-icon"><i class="fas fa-shield-alt"></i></div>
                         <h4>Confianza</h4>
                         <p>Relaciones duraderas basadas en transparencia, honestidad y credibilidad en cada interacción con nuestros clientes.</p>
-                        <div class="value-highlight">
-                            <i class="fas fa-certificate"></i>
-                            <span>Confianza garantizada</span>
-                        </div>
+                        <div class="value-highlight"><i class="fas fa-certificate"></i><span>Confianza garantizada</span></div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="value-card">
-                        <div class="value-icon">
-                            <i class="fas fa-star"></i>
-                        </div>
+                        <div class="value-icon"><i class="fas fa-star"></i></div>
                         <h4>Excelencia</h4>
                         <p>Búsqueda constante de la perfección en productos, servicios y procesos, superando siempre las expectativas del cliente.</p>
-                        <div class="value-highlight">
-                            <i class="fas fa-award"></i>
-                            <span>Calidad superior</span>
-                        </div>
+                        <div class="value-highlight"><i class="fas fa-award"></i><span>Calidad superior</span></div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
                     <div class="value-card">
-                        <div class="value-icon">
-                            <i class="fas fa-lightbulb"></i>
-                        </div>
+                        <div class="value-icon"><i class="fas fa-lightbulb"></i></div>
                         <h4>Innovación</h4>
                         <p>Adopción de nuevas tecnologías y métodos para ofrecer soluciones avanzadas y mantenernos a la vanguardia del sector.</p>
-                        <div class="value-highlight">
-                            <i class="fas fa-rocket"></i>
-                            <span>Tecnología avanzada</span>
-                        </div>
+                        <div class="value-highlight"><i class="fas fa-rocket"></i><span>Tecnología avanzada</span></div>
                     </div>
                 </div>
             </div>
@@ -535,149 +309,259 @@
             <div class="row mb-5">
                 <div class="col-12 text-center" data-aos="fade-up">
                     <h2 class="section-title">Catálogo de Productos</h2>
-                    <p class="section-subtitle">Refacciones premium para todas las marcas y modelos de vehículos</p>
+                    <p class="section-subtitle">Las mejores marcas de frenos del mundo, disponibles para ti</p>
                 </div>
             </div>
             <div class="row">
+                <!-- EBC -->
                 <div class="col-lg-3 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
                     <div class="product-card">
-                        <div class="product-badge">PREMIUM</div>
+                        <div class="product-badge">PERFORMANCE</div>
                         <div class="product-image">
-                            <img src="images/producto-1.webp" alt="Pastillas de Freno" class="img-fluid">
+                            <img src="images/productos/ebc_brakes.webp" alt="EBC Brakes" class="img-fluid brand-logo-img">
                             <div class="product-overlay">
-                                <a href="#" class="btn btn-danger">Ver Detalles</a>
+                                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalEBC">Ver Detalles</button>
                             </div>
                         </div>
                         <div class="product-info">
-                            <div class="product-icon">
-                                <i class="fas fa-brake-disc"></i>
-                            </div>
-                            <h5>Pastillas de Freno</h5>
-                            <p>Pastillas de freno de alta calidad para máxima seguridad y rendimiento</p>
+                            <div class="product-icon"><i class="fas fa-circle-notch"></i></div>
+                            <h5>EBC Brakes</h5>
+                            <p>Marca británica líder en pastillas y discos de freno de alto rendimiento para uso deportivo y diario.</p>
                             <div class="product-features">
-                                <span class="feature-tag">Brembo</span>
-                                <span class="feature-tag">ATE</span>
+                                <span class="feature-tag">Deportivo</span>
+                                <span class="feature-tag">Calle</span>
                             </div>
-                            <div class="product-price">Desde $299</div>
                         </div>
                     </div>
                 </div>
+                <!-- FR Racing -->
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="150">
+                    <div class="product-card">
+                        <div class="product-badge">RACING</div>
+                        <div class="product-image">
+                            <img src="images/productos/fr_racing.jpeg" alt="FR Racing" class="img-fluid brand-logo-img">
+                            <div class="product-overlay">
+                                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalFR">Ver Detalles</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-icon"><i class="fas fa-flag-checkered"></i></div>
+                            <h5>FR Racing</h5>
+                            <p>Sistemas de frenos de competición con tecnología de pista adaptada para vehículos de alto rendimiento.</p>
+                            <div class="product-features">
+                                <span class="feature-tag">Competición</span>
+                                <span class="feature-tag">Track</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Best Brakes Euro -->
                 <div class="col-lg-3 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
                     <div class="product-card">
-                        <div class="product-badge">BESTSELLER</div>
+                        <div class="product-badge">EURO</div>
                         <div class="product-image">
-                            <img src="images/producto-2.webp" alt="Filtros de Aceite" class="img-fluid">
+                            <img src="images/productos/ebc_brakes.webp" alt="Best Brakes Euro" class="img-fluid brand-logo-img">
                             <div class="product-overlay">
-                                <a href="#" class="btn btn-danger">Ver Detalles</a>
+                                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalBBE">Ver Detalles</button>
                             </div>
                         </div>
                         <div class="product-info">
-                            <div class="product-icon">
-                                <i class="fas fa-filter"></i>
-                            </div>
-                            <h5>Filtros de Aceite</h5>
-                            <p>Filtros de aceite premium para mantener tu motor en óptimas condiciones</p>
+                            <div class="product-icon"><i class="fas fa-star"></i></div>
+                            <h5>Best Brakes Euro</h5>
+                            <p>Refacciones de frenos de origen europeo con estándares OEM para vehículos europeos de todas las gamas.</p>
                             <div class="product-features">
-                                <span class="feature-tag">Mann</span>
-                                <span class="feature-tag">Bosch</span>
+                                <span class="feature-tag">OEM</span>
+                                <span class="feature-tag">Europeo</span>
                             </div>
-                            <div class="product-price">Desde $150</div>
                         </div>
                     </div>
                 </div>
+                <!-- Dynamic -->
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="250">
+                    <div class="product-card">
+                        <div class="product-badge">DYNAMIC</div>
+                        <div class="product-image">
+                            <img src="images/productos/dynamic.png" alt="Dynamic" class="img-fluid brand-logo-img">
+                            <div class="product-overlay">
+                                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalDynamic">Ver Detalles</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            <h5>Dynamic</h5>
+                            <p>Pastillas y discos de freno con compuestos avanzados para máxima fricción y durabilidad en todo tipo de condiciones.</p>
+                            <div class="product-features">
+                                <span class="feature-tag">Durabilidad</span>
+                                <span class="feature-tag">Premium</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Motul -->
                 <div class="col-lg-3 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="300">
                     <div class="product-card">
-                        <div class="product-badge">NUEVO</div>
+                        <div class="product-badge">FLUIDOS</div>
                         <div class="product-image">
-                            <img src="images/producto-3.jpg" alt="Amortiguadores" class="img-fluid">
+                            <img src="images/productos/motul.jpg" alt="Motul" class="img-fluid brand-logo-img">
                             <div class="product-overlay">
-                                <a href="#" class="btn btn-danger">Ver Detalles</a>
+                                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalMotul">Ver Detalles</button>
                             </div>
                         </div>
                         <div class="product-info">
-                            <div class="product-icon">
-                                <i class="fas fa-car-side"></i>
-                            </div>
-                            <h5>Amortiguadores</h5>
-                            <p>Amortiguadores de alta calidad para máximo confort y control de manejo</p>
+                            <div class="product-icon"><i class="fas fa-oil-can"></i></div>
+                            <h5>Motul</h5>
+                            <p>Líquidos de freno de alta especificación DOT 4 y DOT 5.1 con punto de ebullición superior para uso deportivo e intensivo.</p>
                             <div class="product-features">
-                                <span class="feature-tag">Monroe</span>
-                                <span class="feature-tag">Sachs</span>
+                                <span class="feature-tag">DOT 4</span>
+                                <span class="feature-tag">DOT 5.1</span>
                             </div>
-                            <div class="product-price">Desde $450</div>
                         </div>
                     </div>
                 </div>
+                <!-- Akebono -->
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="350">
+                    <div class="product-card">
+                        <div class="product-badge">JAPONÉS</div>
+                        <div class="product-image">
+                            <img src="images/productos/akebono.webp" alt="Akebono" class="img-fluid brand-logo-img">
+                            <div class="product-overlay">
+                                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalAkebono">Ver Detalles</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-icon"><i class="fas fa-shield-alt"></i></div>
+                            <h5>Akebono</h5>
+                            <p>Fabricante japonés de pastillas de freno sin asbesto, reconocido por su bajo nivel de ruido y polvo, ideal para vehículos asiáticos.</p>
+                            <div class="product-features">
+                                <span class="feature-tag">Sin ruido</span>
+                                <span class="feature-tag">OEM Japan</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pagid Racing -->
                 <div class="col-lg-3 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="400">
                     <div class="product-card">
-                        <div class="product-badge">OFERTA</div>
+                        <div class="product-badge">RACING</div>
                         <div class="product-image">
-                            <img src="images/producto-4.webp" alt="Bujías" class="img-fluid">
+                            <img src="images/productos/pagid_racing.jpg" alt="Pagid Racing" class="img-fluid brand-logo-img">
                             <div class="product-overlay">
-                                <a href="#" class="btn btn-danger">Ver Detalles</a>
+                                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalPagid">Ver Detalles</button>
                             </div>
                         </div>
                         <div class="product-info">
-                            <div class="product-icon">
-                                <i class="fas fa-bolt"></i>
-                            </div>
-                            <h5>Bujías de Encendido</h5>
-                            <p>Bujías de alta calidad para un encendido perfecto y mejor rendimiento</p>
+                            <div class="product-icon"><i class="fas fa-trophy"></i></div>
+                            <h5>Pagid Racing</h5>
+                            <p>Pastillas de freno de competición utilizadas en F1, GT y endurance. Tecnología de pista para el máximo rendimiento en frenado.</p>
                             <div class="product-features">
-                                <span class="feature-tag">NGK</span>
-                                <span class="feature-tag">Bosch</span>
+                                <span class="feature-tag">F1</span>
+                                <span class="feature-tag">GT Racing</span>
                             </div>
-                            <div class="product-price">Desde $80</div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="500">
+                <!-- Textar -->
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="450">
                     <div class="product-card">
-                        <div class="product-badge">POPULAR</div>
+                        <div class="product-badge">ALEMÁN</div>
                         <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
-                                 alt="Eléctrico" class="img-fluid">
+                            <img src="images/productos/textar.jpeg" alt="Textar" class="img-fluid brand-logo-img">
                             <div class="product-overlay">
-                                <a href="#" class="btn btn-danger">Ver Catálogo</a>
+                                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalTextar">Ver Detalles</button>
                             </div>
                         </div>
                         <div class="product-info">
-                            <div class="product-icon">
-                                <i class="fas fa-bolt"></i>
-                            </div>
-                            <h5>Sistema Eléctrico</h5>
-                            <p>Baterías, alternadores, motores de arranque y componentes eléctricos especializados</p>
+                            <div class="product-icon"><i class="fas fa-cog"></i></div>
+                            <h5>Textar</h5>
+                            <p>Marca alemana con más de 100 años de experiencia en sistemas de frenos OEM para las principales marcas europeas.</p>
                             <div class="product-features">
-                                <span class="feature-tag">Bosch</span>
-                                <span class="feature-tag">Denso</span>
-                                <span class="feature-tag">Valeo</span>
+                                <span class="feature-tag">OEM</span>
+                                <span class="feature-tag">Alemán</span>
                             </div>
-                            <div class="product-price">Desde $200</div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="600">
+                <!-- Fricco -->
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="product-card">
+                        <div class="product-badge">CALIDAD</div>
+                        <div class="product-image">
+                            <img src="images/productos/dfc_brakes.jpg" alt="Fricco" class="img-fluid brand-logo-img">
+                            <div class="product-overlay">
+                                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalFricco">Ver Detalles</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-icon"><i class="fas fa-check-circle"></i></div>
+                            <h5>Fricco</h5>
+                            <p>Marca mexicana de pastillas de freno con amplia cobertura para vehículos nacionales e importados, excelente relación calidad-precio.</p>
+                            <div class="product-features">
+                                <span class="feature-tag">Nacional</span>
+                                <span class="feature-tag">Económico</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- DFC -->
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="550">
                     <div class="product-card">
                         <div class="product-badge">COMPLETO</div>
                         <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
-                                 alt="Lubricantes" class="img-fluid">
+                            <img src="images/productos/dfc_brakes.jpg" alt="DFC" class="img-fluid brand-logo-img">
                             <div class="product-overlay">
-                                <a href="#" class="btn btn-danger">Ver Catálogo</a>
+                                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalDFC">Ver Detalles</button>
                             </div>
                         </div>
                         <div class="product-info">
-                            <div class="product-icon">
-                                <i class="fas fa-oil-can"></i>
-                            </div>
-                            <h5>Lubricantes y Fluidos</h5>
-                            <p>Aceites, refrigerantes, líquidos de freno y todos los fluidos esenciales del vehículo</p>
+                            <div class="product-icon"><i class="fas fa-layer-group"></i></div>
+                            <h5>DFC</h5>
+                            <p>Dynamic Friction Company ofrece kits completos de frenos con discos y pastillas de alta calidad para todo tipo de vehículos.</p>
                             <div class="product-features">
-                                <span class="feature-tag">Mobil 1</span>
-                                <span class="feature-tag">Castrol</span>
-                                <span class="feature-tag">Shell</span>
+                                <span class="feature-tag">Kits</span>
+                                <span class="feature-tag">Completo</span>
                             </div>
-                            <div class="product-price">Desde $80</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Power Stop -->
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="product-card">
+                        <div class="product-badge">BESTSELLER</div>
+                        <div class="product-image">
+                            <img src="images/productos/power_stop.webp" alt="Power Stop" class="img-fluid brand-logo-img">
+                            <div class="product-overlay">
+                                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalPowerStop">Ver Detalles</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-icon"><i class="fas fa-bolt"></i></div>
+                            <h5>Power Stop</h5>
+                            <p>Kits de frenos de alto rendimiento con discos ranurados y pastillas de carbono-cerámica para máxima potencia de frenado.</p>
+                            <div class="product-features">
+                                <span class="feature-tag">Cerámica</span>
+                                <span class="feature-tag">Ranurado</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Centric -->
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="650">
+                    <div class="product-card">
+                        <div class="product-badge">PREMIUM</div>
+                        <div class="product-image">
+                            <img src="images/productos/centric.jpeg" alt="Centric" class="img-fluid brand-logo-img">
+                            <div class="product-overlay">
+                                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalCentric">Ver Detalles</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-icon"><i class="fas fa-award"></i></div>
+                            <h5>Centric</h5>
+                            <p>Fabricante estadounidense con la mayor cobertura de refacciones de frenos del mercado, desde componentes básicos hasta piezas de alto rendimiento.</p>
+                            <div class="product-features">
+                                <span class="feature-tag">USA</span>
+                                <span class="feature-tag">Mayor cobertura</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -690,17 +574,9 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6" data-aos="fade-right">
-                    <h2 class="section-title">Sobre S-Brakes</h2>
-                    <p class="mb-4">
-                        Con más de dos décadas en el mercado automotriz, S-Brakes se ha consolidado como líder 
-                        en la distribución de refacciones de alta calidad. Nuestra misión es brindar a nuestros 
-                        clientes productos confiables que garanticen la seguridad y el rendimiento óptimo de sus vehículos.
-                    </p>
+                    <h2 class="section-title">Sobre S-BRAKES</h2>
+                    <p class="mb-4">S-BRAKES nace con una visión clara: elevar el estándar de seguridad en los sistemas de frenado. Nos especializamos en vehículos asiáticos, europeos, de gama alta y blindaje SUVs, ofreciendo componentes y soluciones de alto desempeño de marcas reconocidas por su calidad y confiabilidad. Porque cuando se trata de frenar, la exigencia no es un lujo: es una necesidad.</p>
                     <div class="stats-row">
-                        <div class="stat-item">
-                            <h3 class="stat-number">20+</h3>
-                            <p>Años de Experiencia</p>
-                        </div>
                         <div class="stat-item">
                             <h3 class="stat-number">50K+</h3>
                             <p>Clientes Satisfechos</p>
@@ -713,8 +589,7 @@
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
                     <div class="about-image">
-                        <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                             alt="Taller" class="img-fluid rounded-3">
+                        <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Taller" class="img-fluid rounded-3">
                     </div>
                 </div>
             </div>
@@ -727,41 +602,23 @@
             <div class="row align-items-center">
                 <div class="col-lg-8" data-aos="fade-right">
                     <div class="whatsapp-content">
-                        <div class="whatsapp-icon mb-3">
-                            <i class="fab fa-whatsapp"></i>
-                        </div>
+                        <div class="whatsapp-icon mb-3"><i class="fab fa-whatsapp"></i></div>
                         <h2 class="mb-3">¿Necesitas una Cotización Rápida?</h2>
-                        <p class="lead mb-4">
-                            Obtén precios al instante para cualquier refacción o servicio. Nuestro equipo de expertos 
-                            te responderá inmediatamente con la mejor cotización del mercado.
-                        </p>
+                        <p class="lead mb-4">Obtén precios al instante para cualquier refacción o servicio. Nuestro equipo de expertos te responderá inmediatamente con la mejor cotización del mercado.</p>
                         <div class="whatsapp-features">
-                            <div class="feature-item">
-                                <i class="fas fa-clock"></i>
-                                <span>Respuesta inmediata</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-calculator"></i>
-                                <span>Cotización gratuita</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-user-tie"></i>
-                                <span>Asesoría personalizada</span>
-                            </div>
+                            <div class="feature-item"><i class="fas fa-clock"></i><span>Respuesta inmediata</span></div>
+                            <div class="feature-item"><i class="fas fa-calculator"></i><span>Cotización gratuita</span></div>
+                            <div class="feature-item"><i class="fas fa-user-tie"></i><span>Asesoría personalizada</span></div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 text-center" data-aos="fade-left">
                     <div class="whatsapp-cta">
                         <h3 class="mb-4">¡Cotiza Ahora!</h3>
-                        <a href="https://wa.me/5215647437541?text=Hola%20S-Brakes,%20me%20interesa%20cotizar%20refacciones%20para%20mi%20vehículo.%20¿Podrían%20ayudarme?" 
-                           target="_blank" class="btn btn-light btn-lg whatsapp-btn">
-                            <i class="fab fa-whatsapp me-2"></i>
-                            Enviar Mensaje
+                        <a href="https://wa.me/5584453639?text=Hola%20S-Brakes,%20me%20interesa%20cotizar%20refacciones%20para%20mi%20vehículo.%20¿Podrían%20ayudarme?" target="_blank" class="btn btn-light btn-lg whatsapp-btn">
+                            <i class="fab fa-whatsapp me-2"></i>Enviar Mensaje
                         </a>
-                        <p class="mt-3 mb-0">
-                            <small>+52 1 56 4743 7541</small>
-                        </p>
+                        <p class="mt-3 mb-0"><small>+55 8445 3639</small></p>
                     </div>
                 </div>
             </div>
@@ -780,14 +637,8 @@
             <div class="row">
                 <div class="col-lg-8 mb-4" data-aos="fade-right">
                     <div class="map-container">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.2!2d-99.1190979!4d19.4178255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff823d55ca67%3A0xedcc72e0616d96b5!2sS-BRAKES%20M%C3%89XICO!5e0!3m2!1ses!2smx!4v1234567890123!5m2!1ses!2smx" 
-                            width="100%" 
-                            height="400" 
-                            style="border:0;border-radius:15px;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.2!2d-99.1190979!4d19.4178255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff823d55ca67%3A0xedcc72e0616d96b5!2sS-BRAKES%20M%C3%89XICO!5e0!3m2!1ses!2smx!4v1234567890123!5m2!1ses!2smx"
+                            width="100%" height="400" style="border:0;border-radius:15px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
                     </div>
                 </div>
@@ -795,38 +646,28 @@
                     <div class="location-info">
                         <h3 class="mb-4">Información de Contacto</h3>
                         <div class="location-item">
-                            <div class="location-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
+                            <div class="location-icon"><i class="fas fa-map-marker-alt"></i></div>
                             <div class="location-details">
                                 <h5>Dirección</h5>
                                 <p>Calle Zoquipa 242<br>Aeronáutica Militar<br>Venustiano Carranza, 15970<br>Ciudad de México, CDMX</p>
                             </div>
                         </div>
                         <div class="location-item">
-                            <div class="location-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
+                            <div class="location-icon"><i class="fas fa-clock"></i></div>
                             <div class="location-details">
                                 <h5>Horarios de Atención</h5>
-                                <p>Lunes a Viernes: 8:00 AM - 7:00 PM<br>
-                                   Sábados: 8:00 AM - 5:00 PM<br>
-                                   Domingos: 9:00 AM - 2:00 PM</p>
+                                <p>Lunes a Viernes: 9:00 AM - 6:30 PM<br>Sábados: 8:00 AM - 2:00 PM</p>
                             </div>
                         </div>
                         <div class="location-item">
-                            <div class="location-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
+                            <div class="location-icon"><i class="fas fa-phone"></i></div>
                             <div class="location-details">
                                 <h5>Teléfono</h5>
-                                <p>+52 1 56 4743 7541</p>
+                                <p>+55 8445 3639</p>
                             </div>
                         </div>
                         <div class="location-item">
-                            <div class="location-icon">
-                                <i class="fas fa-car"></i>
-                            </div>
+                            <div class="location-icon"><i class="fas fa-car"></i></div>
                             <div class="location-details">
                                 <h5>Estacionamiento</h5>
                                 <p>Amplio estacionamiento gratuito disponible</p>
@@ -861,42 +702,38 @@
                             <i class="fas fa-phone"></i>
                             <div>
                                 <h5>Teléfono</h5>
-                                <p>+52 1 56 4743 7541</p>
+                                <p>+55 8445 3639</p>
                             </div>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
                             <div>
                                 <h5>Email</h5>
-                                <p>info@s-brakes.com</p>
+                                <p>sbakesmexico@gmail.com</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-                    <form class="contact-form">
+                    <form class="contact-form" id="contactForm" onsubmit="enviarWhatsApp(event)">
                         <div class="row">
                             <div class="col-md-6 mb-3">
-                                <input type="text" class="form-control" placeholder="Nombre completo" required>
+                                <input type="text" id="contactNombre" class="form-control" placeholder="Nombre completo" required>
                             </div>
                             <div class="col-md-6 mb-3">
-                                <input type="email" class="form-control" placeholder="Email" required>
+                                <input type="tel" id="contactTelefono" class="form-control" placeholder="Teléfono" required>
                             </div>
                         </div>
                         <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Asunto" required>
+                            <input type="text" id="contactAsunto" class="form-control" placeholder="Asunto" required>
                         </div>
                         <div class="mb-3">
-                            <textarea class="form-control" rows="5" placeholder="Mensaje" required></textarea>
+                            <textarea id="contactMensaje" class="form-control" rows="5" placeholder="Mensaje" required></textarea>
                         </div>
                         <div class="d-flex gap-3">
-                            <button type="submit" class="btn btn-primary btn-lg">
-                                <i class="fas fa-paper-plane me-2"></i>Enviar Mensaje
+                            <button type="submit" class="btn btn-success btn-lg">
+                                <i class="fab fa-whatsapp me-2"></i>Enviar por WhatsApp
                             </button>
-                            <a href="https://wa.me/5215647437541?text=Hola%20S-Brakes,%20me%20gustaría%20obtener%20más%20información%20sobre%20sus%20servicios." 
-                               target="_blank" class="btn btn-success btn-lg">
-                                <i class="fab fa-whatsapp me-2"></i>WhatsApp
-                            </a>
                         </div>
                     </form>
                 </div>
@@ -923,11 +760,304 @@
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5584453639" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Modales de Marcas -->
+    <div class="modal fade" id="modalEBC" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title">EBC Brakes</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/productos/ebc_brakes.webp" class="brand-modal-img" alt="EBC">
+                    <p>EBC Brakes es una marca británica fundada en 1978, especializada en pastillas y discos de freno de alto rendimiento. Sus productos cubren desde uso diario hasta competición, con líneas como Greenstuff (calle), Yellowstuff (sport) y Bluestuff (pista). Reconocida mundialmente por su calidad y durabilidad.</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-danger me-2"></i>Pastillas para calle y pista</li>
+                        <li><i class="fas fa-check text-danger me-2"></i>Discos ranurados y perforados</li>
+                        <li><i class="fas fa-check text-danger me-2"></i>Kits completos de frenos</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="#contacto" class="btn btn-dark" data-bs-dismiss="modal">Cotizar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalFR" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title">FR Racing</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/productos/fr_racing.jpeg" class="brand-modal-img" alt="FR Racing">
+                    <p>FR Racing es una marca especializada en sistemas de frenos de competición. Sus pastillas y discos están diseñados para soportar las temperaturas extremas de la pista, ofreciendo máxima mordida y consistencia en frenadas repetidas. Usados en campeonatos nacionales e internacionales.</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-danger me-2"></i>Pastillas de competición</li>
+                        <li><i class="fas fa-check text-danger me-2"></i>Alta resistencia térmica</li>
+                        <li><i class="fas fa-check text-danger me-2"></i>Para uso en pista</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="#contacto" class="btn btn-dark" data-bs-dismiss="modal">Cotizar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalBBE" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title">Best Brakes Euro</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/productos/ebc_brakes.webp" class="brand-modal-img" alt="Best Brakes Euro">
+                    <p>Best Brakes Euro ofrece refacciones de frenos con estándares OEM europeos para vehículos de las principales marcas del viejo continente. Sus productos garantizan compatibilidad perfecta y rendimiento equivalente al equipo original, con una amplia cobertura de aplicaciones.</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-danger me-2"></i>Compatibilidad OEM europea</li>
+                        <li><i class="fas fa-check text-danger me-2"></i>Pastillas y discos</li>
+                        <li><i class="fas fa-check text-danger me-2"></i>Amplia cobertura de modelos</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="#contacto" class="btn btn-dark" data-bs-dismiss="modal">Cotizar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalDynamic" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title">Dynamic Friction</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/productos/dynamic.png" class="brand-modal-img" alt="Dynamic">
+                    <p>Dynamic Friction Company fabrica pastillas y discos de freno con compuestos avanzados que garantizan máxima fricción, durabilidad y bajo nivel de polvo. Sus productos están disponibles en versiones para uso diario y alto rendimiento, con cobertura para la mayoría de vehículos del mercado.</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-danger me-2"></i>Compuestos avanzados</li>
+                        <li><i class="fas fa-check text-danger me-2"></i>Bajo nivel de polvo</li>
+                        <li><i class="fas fa-check text-danger me-2"></i>Uso diario y sport</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="#contacto" class="btn btn-dark" data-bs-dismiss="modal">Cotizar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalMotul" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title">Motul</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/productos/motul.jpg" class="brand-modal-img" alt="Motul">
+                    <p>Motul es una empresa francesa con más de 160 años de historia, reconocida mundialmente por sus lubricantes y fluidos de alto rendimiento. Su línea de líquidos de freno DOT 4 y DOT 5.1 ofrece puntos de ebullición superiores, ideales para uso deportivo e intensivo donde el sistema de frenos trabaja a altas temperaturas.</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-danger me-2"></i>Líquido de freno DOT 4 y DOT 5.1</li>
+                        <li><i class="fas fa-check text-danger me-2"></i>Alto punto de ebullición</li>
+                        <li><i class="fas fa-check text-danger me-2"></i>Uso deportivo e intensivo</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="#contacto" class="btn btn-dark" data-bs-dismiss="modal">Cotizar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalAkebono" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title">Akebono</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/productos/akebono.webp" class="brand-modal-img" alt="Akebono">
+                    <p>Akebono es el mayor fabricante japonés de frenos, proveedor OEM de Toyota, Honda, Nissan y otras marcas asiáticas. Sus pastillas sin asbesto son reconocidas por su silencio excepcional, bajo polvo y larga vida útil. También proveen a marcas europeas y americanas de lujo.</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-danger me-2"></i>Proveedor OEM Toyota, Honda</li>
+                        <li><i class="fas fa-check text-danger me-2"></i>Sin ruido ni vibraciones</li>
+                        <li><i class="fas fa-check text-danger me-2"></i>Bajo nivel de polvo</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="#contacto" class="btn btn-dark" data-bs-dismiss="modal">Cotizar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalPagid" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title">Pagid Racing</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/productos/pagid_racing.jpg" class="brand-modal-img" alt="Pagid Racing">
+                    <p>Pagid Racing es la división de competición de TMD Friction, utilizada en Fórmula 1, Le Mans, DTM y GT. Sus pastillas de freno de carbono y sinterizadas ofrecen el máximo rendimiento en condiciones extremas. También cuentan con líneas para uso en calle de alto rendimiento.</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-danger me-2"></i>Tecnología F1 y Le Mans</li>
+                        <li><i class="fas fa-check text-danger me-2"></i>Pastillas de carbono y sinterizadas</li>
+                        <li><i class="fas fa-check text-danger me-2"></i>Máximo rendimiento en pista</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="#contacto" class="btn btn-dark" data-bs-dismiss="modal">Cotizar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalTextar" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title">Textar</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/productos/textar.jpeg" class="brand-modal-img" alt="Textar">
+                    <p>Textar es una marca alemana con más de 100 años de experiencia, parte del grupo TMD Friction. Es proveedor OEM de BMW, Mercedes-Benz, Volkswagen y Audi. Sus pastillas y discos de freno cumplen con los más altos estándares de calidad europeos y son la elección preferida para vehículos alemanes.</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-danger me-2"></i>OEM BMW, Mercedes, VW, Audi</li>
+                        <li><i class="fas fa-check text-danger me-2"></i>+100 años de experiencia</li>
+                        <li><i class="fas fa-check text-danger me-2"></i>Estándares europeos</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="#contacto" class="btn btn-dark" data-bs-dismiss="modal">Cotizar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalFricco" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title">Fricco</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/productos/dfc_brakes.jpg" class="brand-modal-img" alt="Fricco">
+                    <p>Fricco es una marca mexicana de pastillas de freno con amplia cobertura para vehículos nacionales e importados. Ofrece una excelente relación calidad-precio con productos que cumplen normas internacionales. Ideal para el mercado latinoamericano con disponibilidad inmediata.</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-danger me-2"></i>Marca mexicana de confianza</li>
+                        <li><i class="fas fa-check text-danger me-2"></i>Amplia cobertura de vehículos</li>
+                        <li><i class="fas fa-check text-danger me-2"></i>Excelente precio-calidad</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="#contacto" class="btn btn-dark" data-bs-dismiss="modal">Cotizar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalDFC" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title">DFC - Dynamic Friction Company</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/productos/dfc_brakes.jpg" class="brand-modal-img" alt="DFC">
+                    <p>Dynamic Friction Company (DFC) es un fabricante estadounidense que ofrece kits completos de frenos con discos y pastillas de alta calidad. Sus productos incluyen discos con recubrimiento anticorrosivo, pastillas de bajo polvo y kits listos para instalar, con cobertura para miles de aplicaciones.</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-danger me-2"></i>Kits completos disco + pastilla</li>
+                        <li><i class="fas fa-check text-danger me-2"></i>Recubrimiento anticorrosivo</li>
+                        <li><i class="fas fa-check text-danger me-2"></i>Miles de aplicaciones</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="#contacto" class="btn btn-dark" data-bs-dismiss="modal">Cotizar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalPowerStop" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title">Power Stop</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/productos/power_stop.webp" class="brand-modal-img" alt="Power Stop">
+                    <p>Power Stop es una marca estadounidense especializada en kits de frenos de alto rendimiento. Sus discos ranurados y perforados combinados con pastillas de carbono-cerámica ofrecen hasta un 30% más de potencia de frenado. Muy populares en camionetas, SUVs y vehículos de trabajo.</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-danger me-2"></i>Discos ranurados y perforados</li>
+                        <li><i class="fas fa-check text-danger me-2"></i>Pastillas carbono-cerámica</li>
+                        <li><i class="fas fa-check text-danger me-2"></i>+30% potencia de frenado</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="#contacto" class="btn btn-dark" data-bs-dismiss="modal">Cotizar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalCentric" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title">Centric Parts</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/productos/centric.jpeg" class="brand-modal-img" alt="Centric">
+                    <p>Centric Parts es un fabricante estadounidense con la mayor cobertura de refacciones de frenos del mercado norteamericano. Ofrece desde componentes básicos de repuesto hasta piezas de alto rendimiento bajo sus marcas StopTech y Posi Quiet. Cobertura para más de 50,000 aplicaciones.</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-danger me-2"></i>Mayor cobertura del mercado</li>
+                        <li><i class="fas fa-check text-danger me-2"></i>Marcas StopTech y Posi Quiet</li>
+                        <li><i class="fas fa-check text-danger me-2"></i>+50,000 aplicaciones</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="#contacto" class="btn btn-dark" data-bs-dismiss="modal">Cotizar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- AOS Animation JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- Custom JS -->
     <script src="script.js"></script>
 </body>
+
 </html>
+
