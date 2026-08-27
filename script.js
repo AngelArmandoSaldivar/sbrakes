@@ -182,13 +182,32 @@ document.querySelectorAll('.feature-card').forEach(card => {
     });
 });
 
-// Parallax effect for hero section
-window.addEventListener('scroll', function() {
-    const scrolled = window.pageYOffset;
-    const heroSection = document.querySelector('.hero-section');
-    if (heroSection) {
-        heroSection.style.transform = `translateY(${scrolled * 0.5}px)`;
-    }
+// Background image rotator for hero slides
+// Agrega aquí los nombres de tus imágenes en images/autos/
+const heroBackgrounds = [
+    'images/autos/taller_cupra.png',
+    'images/autos/m3.png',
+    'images/autos/audi.jpeg',
+];
+
+let bgIndex = 0;
+
+function rotateBackgrounds() {
+    const slides = document.querySelectorAll('.hero-slide');
+    if (!slides.length || !heroBackgrounds.length) return;
+    const img = heroBackgrounds[bgIndex];
+    slides.forEach(slide => {
+        // Obtener el overlay del atributo data o usar uno por defecto
+        const overlay = slide.getAttribute('data-overlay') || 'linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%)';
+        slide.style.backgroundImage = `${overlay}, url('${img}')`;
+    });
+    bgIndex = (bgIndex + 1) % heroBackgrounds.length;
+}
+
+// Guardar el overlay original de cada slide antes de sobreescribir
+document.addEventListener('DOMContentLoaded', function() {
+    rotateBackgrounds(); // Aplicar inmediatamente al cargar
+    setInterval(rotateBackgrounds, 4000);
 });
 
 // Loading screen (optional)
@@ -262,3 +281,21 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 1000);
     }
 });
+
+function enviarWhatsApp(e) {
+    e.preventDefault();
+    const nombre   = document.getElementById('contactNombre').value.trim();
+    const telefono = document.getElementById('contactTelefono').value.trim();
+    const asunto   = document.getElementById('contactAsunto').value.trim();
+    const mensaje  = document.getElementById('contactMensaje').value.trim();
+
+    const texto =
+        `*Nuevo mensaje desde S-Brakes*\n\n` +
+        `*Nombre:* ${nombre}\n` +
+        `*Teléfono:* ${telefono}\n` +
+        `*Asunto:* ${asunto}\n` +
+        `*Mensaje:* ${mensaje}`;
+
+    const url = `https://wa.me/5584453639?text=${encodeURIComponent(texto)}`;
+    window.open(url, '_blank');
+}
