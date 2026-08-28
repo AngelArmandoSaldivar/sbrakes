@@ -59,7 +59,7 @@ html {
 }
 
 .navbar-logo-img {
-    height: 92px;
+    height: 55px;
     width: auto;
     margin: -22px 0;
     display: block;
@@ -72,14 +72,14 @@ html {
 
 @media (max-width: 991px) {
     .navbar-logo-img {
-        height: 80px;
+        height: 55px;
         margin: -18px 0;
     }
 }
 
 @media (max-width: 400px) {
     .navbar-logo-img {
-        height: 70px;
+        height: 55px;
         margin: -14px 0;
     }
 }
