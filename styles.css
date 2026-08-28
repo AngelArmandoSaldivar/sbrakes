@@ -49,6 +49,41 @@ html {
     box-shadow: 0 4px 25px rgba(0,0,0,0.15);
 }
 
+/* Navbar logo: enlarged visually via negative margin, so the
+   image itself is bigger but the space it takes in the navbar's
+   normal flow (and therefore the navbar's height) stays the same. */
+.navbar-brand {
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo-img {
+    height: 92px;
+    width: auto;
+    margin: -22px 0;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover .navbar-logo-img {
+    transform: scale(1.04);
+}
+
+@media (max-width: 991px) {
+    .navbar-logo-img {
+        height: 80px;
+        margin: -18px 0;
+    }
+}
+
+@media (max-width: 400px) {
+    .navbar-logo-img {
+        height: 70px;
+        margin: -14px 0;
+    }
+}
+
 /* Brand Styles */
 .brand-container {
     display: flex;
@@ -248,10 +283,14 @@ html {
     }
 }
 
-/* Hero Section */
+/* ============================================= */
+/* Hero Section / Slider - Responsive & Enhanced  */
+/* ============================================= */
 .hero-section {
     position: relative;
     overflow: hidden;
+    padding-top: 0;
+    margin-top: 0;
 }
 
 .hero-overlay {
@@ -265,7 +304,7 @@ html {
 }
 
 .hero-title {
-    font-size: clamp(1.8rem, 5vw, 3.2rem);
+    font-size: clamp(1.7rem, 4.5vw, 3.2rem);
     font-weight: 700;
     color: white;
     line-height: 1.2;
@@ -278,24 +317,29 @@ html {
 }
 
 .hero-description {
-    font-size: clamp(0.95rem, 2vw, 1.1rem);
-    line-height: 2;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    line-height: 1.8;
 }
 
-/* Hero Section */
-.hero-section {
-    position: relative;
-    padding-top: 0;
-    margin-top: 0;
-}
-
+/* Carousel container: fluid height that adapts to viewport,
+   using dvh (dynamic viewport height) with vh fallback so mobile
+   browser toolbars don't cause cropping/overflow */
 #heroCarousel {
     height: 100vh;
+    height: 100svh;
+    min-height: 560px;
+    max-height: 900px;
     position: relative;
+}
+
+#heroCarousel .carousel-inner,
+#heroCarousel .carousel-item {
+    height: 100%;
 }
 
 .hero-slide {
-    height: 100vh;
+    height: 100%;
+    width: 100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -303,85 +347,128 @@ html {
     align-items: center;
     position: relative;
     background-color: #1a1a1a;
-    transition: background-image 1s ease-in-out;
-    background-size: 100%;
+    overflow: hidden;
+}
+
+/* Decorative animated backdrop so slides without a background
+   photo still look intentional and premium */
+.hero-slide::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(220,38,38,0.25) 0%, transparent 45%),
+        radial-gradient(circle at 85% 80%, rgba(220,38,38,0.18) 0%, transparent 50%),
+        repeating-linear-gradient(115deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 60px);
+    pointer-events: none;
+}
+
+.hero-slide .container {
+    position: relative;
+    z-index: 2;
 }
 
 .min-vh-100 {
-    min-height: 100vh !important;
+    min-height: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
+/* Indicators & controls are styled once, responsively, further
+   below in "Enhanced Carousel Indicators/Controls" to avoid
+   conflicting rules fighting the cascade. */
+
+/* Tablets */
+@media (max-width: 991px) {
+    #heroCarousel {
+        min-height: 520px;
+    }
+
+    .hero-content {
+        padding-top: 120px;
+        padding-bottom: 40px;
+        text-align: center;
+    }
+
+    .hero-content .d-flex {
+        justify-content: center;
+    }
+}
+
+/* Phones */
 @media (max-width: 768px) {
+    #heroCarousel {
+        height: 100vh;
+        height: 100svh;
+        min-height: 620px;
+        max-height: none;
+    }
+
     .hero-content {
         padding-top: 110px;
-        padding-bottom: 60px;
+        padding-bottom: 50px;
+    }
+
+    .hero-badge {
+        font-size: 0.75rem;
+        padding: 6px 16px;
+    }
+
+    .hero-description {
+        line-height: 1.9;
+    }
+
+    .hero-content .d-flex {
+        flex-direction: column;
+        gap: 0.75rem !important;
+    }
+
+    .hero-content .d-flex .btn {
+        width: 100%;
+        justify-content: center;
+        display: inline-flex;
+        align-items: center;
     }
 }
 
-#heroCarousel .carousel-indicators {
-    bottom: 50px;
-    z-index: 10;
-}
-
-#heroCarousel .carousel-indicators button {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: rgba(255,255,255,0.6);
-    border: none;
-    margin: 0 5px;
-    transition: all 0.3s ease;
-}
-
-#heroCarousel .carousel-indicators button.active {
-    background-color: #dc2626;
-    transform: scale(1.2);
-}
-
-#heroCarousel .carousel-control-prev,
-#heroCarousel .carousel-control-next {
-    width: 50px;
-    height: 50px;
-    background: rgba(220, 38, 38, 0.8);
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    transition: all 0.3s ease;
-}
-
-#heroCarousel .carousel-control-prev {
-    left: 20px;
-}
-
-#heroCarousel .carousel-control-next {
-    right: 20px;
-}
-
-#heroCarousel .carousel-control-prev:hover,
-#heroCarousel .carousel-control-next:hover {
-    background: #dc2626;
-    transform: translateY(-50%) scale(1.1);
-}
-
-@media (max-width: 768px) {
-    .min-vh-100 {
-        padding-top: 120px;
-        padding-bottom: 80px;
+/* Small phones */
+@media (max-width: 420px) {
+    #heroCarousel {
+        min-height: 580px;
     }
-    
-    #heroCarousel .carousel-control-prev,
-    #heroCarousel .carousel-control-next {
-        width: 40px;
-        height: 40px;
+
+    .hero-content {
+        padding-top: 95px;
     }
-    
-    #heroCarousel .carousel-control-prev {
-        left: 10px;
+
+    .hero-title {
+        font-size: 1.6rem;
     }
-    
-    #heroCarousel .carousel-control-next {
-        right: 10px;
+
+    .hero-description {
+        font-size: 0.85rem;
+    }
+
+    #heroCarousel .carousel-indicators {
+        bottom: 10px;
+    }
+}
+
+/* Short / landscape phones: avoid tall content overflowing the viewport */
+@media (max-height: 480px) and (orientation: landscape) {
+    #heroCarousel {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .hero-content {
+        padding-top: 90px;
+        padding-bottom: 30px;
+    }
+
+    .hero-description br {
+        display: none;
     }
 }
 
@@ -911,18 +998,34 @@ html {
 .product-image {
     position: relative;
     overflow: hidden;
-    height: 280px;
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f8f9fa 0%, #eef0f2 100%);
 }
 
 .product-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    object-position: center;
+    padding: 28px;
     transition: transform 0.4s ease;
 }
 
 .product-card:hover .product-image img {
-    transform: scale(1.1);
+    transform: scale(1.06);
+}
+
+@media (max-width: 768px) {
+    .product-image {
+        height: 200px;
+    }
+
+    .product-image img {
+        padding: 20px;
+    }
 }
 
 .product-overlay {
@@ -954,6 +1057,27 @@ html {
 
 .product-info {
     padding: 2rem;
+}
+
+@media (max-width: 768px) {
+    .product-info {
+        padding: 1.4rem;
+    }
+
+    .product-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+        margin-bottom: 15px;
+    }
+
+    .product-info h5 {
+        font-size: 1.15rem;
+    }
+
+    .product-info p {
+        font-size: 0.92rem;
+    }
 }
 
 .product-icon {
@@ -1248,6 +1372,14 @@ html {
     margin-right: 1rem;
     font-size: 1.2rem;
     box-shadow: 0 4px 12px rgba(220,38,38,0.3);
+}
+
+/* fa-map-marker-alt's glyph is narrower/shorter within its own
+   canvas than fa-phone/fa-envelope, so at the same font-size it
+   reads visibly smaller even though the box is identical.
+   Bump just this icon's font-size to match perceived size. */
+.contact-item i.fa-map-marker-alt {
+    font-size: 1.45rem;
 }
 
 .contact-item h5 {
@@ -1580,13 +1712,15 @@ html {
 
 /* Enhanced Carousel Indicators */
 #heroCarousel .carousel-indicators {
-    bottom: 30px;
-    gap: 10px;
+    bottom: clamp(14px, 4vh, 30px);
+    gap: clamp(6px, 1vw, 10px);
+    z-index: 10;
+    margin: 0;
 }
 
 #heroCarousel .carousel-indicators button {
-    width: 15px;
-    height: 15px;
+    width: clamp(10px, 1.8vw, 15px);
+    height: clamp(10px, 1.8vw, 15px);
     border-radius: 50%;
     border: 2px solid rgba(255,255,255,0.5);
     background-color: transparent;
@@ -1622,8 +1756,8 @@ html {
 /* Enhanced Carousel Controls */
 #heroCarousel .carousel-control-prev,
 #heroCarousel .carousel-control-next {
-    width: 70px;
-    height: 70px;
+    width: clamp(38px, 6vw, 70px);
+    height: clamp(38px, 6vw, 70px);
     background: rgba(0,0,0,0.3);
     border-radius: 50%;
     top: 50%;
@@ -1644,17 +1778,17 @@ html {
 }
 
 #heroCarousel .carousel-control-prev {
-    left: 30px;
+    left: clamp(8px, 3vw, 30px);
 }
 
 #heroCarousel .carousel-control-next {
-    right: 30px;
+    right: clamp(8px, 3vw, 30px);
 }
 
 #heroCarousel .carousel-control-prev-icon,
 #heroCarousel .carousel-control-next-icon {
-    width: 30px;
-    height: 30px;
+    width: clamp(16px, 2.5vw, 30px);
+    height: clamp(16px, 2.5vw, 30px);
 }
 
 /* Responsive Design for Enhanced Carousel */
@@ -1684,20 +1818,6 @@ html {
         font-size: 0.8rem;
         padding: 6px 12px;
     }
-    
-    #heroCarousel .carousel-control-prev,
-    #heroCarousel .carousel-control-next {
-        width: 50px;
-        height: 50px;
-    }
-    
-    #heroCarousel .carousel-control-prev {
-        left: 15px;
-    }
-    
-    #heroCarousel .carousel-control-next {
-        right: 15px;
-    }
 }
 
 /* WhatsApp Floating Button */
@@ -1720,6 +1840,22 @@ html {
     text-decoration: none;
 }
 
+.whatsapp-float::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(37,211,102,0.6);
+    animation: whatsapp-pulse 2.4s ease-out infinite;
+    pointer-events: none;
+}
+
+@keyframes whatsapp-pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(37,211,102,0.55); }
+    70%  { box-shadow: 0 0 0 18px rgba(37,211,102,0); }
+    100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+}
+
 .whatsapp-float:hover {
     background: #128c7e;
     transform: scale(1.1);
@@ -1727,6 +1863,101 @@ html {
     box-shadow: 0 10px 30px rgba(37,211,102,0.6);
 }
 
-/* Brand logo cards */
-.brand-logo-img { width: 100%; height: 100%; object-fit: contain; padding: 20px; background: #f8f9fa; } .brand-modal-img { max-height: 160px; width: auto; max-width: 80%; object-fit: contain; display: block; margin: 0 auto 1.2rem; }
+@media (max-width: 576px) {
+    .whatsapp-float {
+        width: 52px;
+        height: 52px;
+        font-size: 1.6rem;
+        bottom: 18px;
+        right: 18px;
+    }
+}
 
+/* Brand logo cards */
+.brand-modal-img { max-height: 160px; width: auto; max-width: 80%; object-fit: contain; display: block; margin: 0 auto 1.2rem; }
+
+/* ============================================= */
+/* General Site-Wide Design Polish                */
+/* (no copy/content changes — visual refinement    */
+/*  only, same color palette throughout)           */
+/* ============================================= */
+
+/* Consistent responsive breathing room: sections that used a fixed
+   80px vertical padding now scale down gracefully on smaller
+   screens instead of eating most of the viewport with whitespace. */
+.features-section,
+.products-section,
+.about-section,
+.contact-section {
+    padding: 80px 0;
+}
+
+@media (max-width: 991px) {
+    .features-section,
+    .products-section,
+    .about-section,
+    .contact-section {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .features-section,
+    .products-section,
+    .about-section,
+    .contact-section {
+        padding: 45px 0;
+    }
+}
+
+/* Modal windows: match the brand's rounded, elevated card language
+   instead of the plain default Bootstrap corners/shadow. */
+.modal-content {
+    border-radius: 18px;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+}
+
+.modal-header {
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.modal-footer {
+    border-top: 1px solid var(--border-color);
+}
+
+/* Consistent hover-lift for every button on the site, layered on
+   top of Bootstrap's own hover states — same colors, just a touch
+   of the depth/motion already used elsewhere on the page. */
+.btn {
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* Accessible, on-brand focus states for keyboard navigation
+   (buttons, links, form fields) instead of the browser default. */
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+.nav-link:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+/* Images that are not part of the first viewport can decode lazily
+   for a faster initial load without any visual difference. */
+img.lazy-below-fold {
+    content-visibility: auto;
+}

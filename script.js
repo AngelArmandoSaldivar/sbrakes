@@ -224,11 +224,15 @@ window.addEventListener('load', function() {
 });
 
 // Mobile menu close on link click
-document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+// IMPORTANT: excludes the dropdown-toggle ("Productos") so that clicking it
+// opens/closes its submenu instead of collapsing the whole mobile menu.
+// The submenu items (.dropdown-item) DO close the whole menu, since they
+// navigate the user to a section.
+document.querySelectorAll('.navbar-nav .nav-link:not(.dropdown-toggle), .navbar-nav .dropdown-item').forEach(link => {
     link.addEventListener('click', function() {
         const navbarCollapse = document.querySelector('.navbar-collapse');
         if (navbarCollapse.classList.contains('show')) {
-            const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+            const bsCollapse = bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
             bsCollapse.hide();
         }
     });
